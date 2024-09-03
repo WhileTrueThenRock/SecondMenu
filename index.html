@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <!-- Slider main container -->
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide" data-category="group1">
+        <div class="content" data-content="five">
+          <video id="slider" autoplay muted loop playsinline>
+            <source src="sample.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="swiper-slide" data-category="group2">
+        <video id="slider" autoplay muted loop playsinline>
+          <source src="sample2.mp4" type="video/mp4">
+        </video>
+        Slide 2
+      </div>
+      <div class="swiper-slide" data-category="group2">
+        <video id="slider" autoplay muted loop playsinline>
+          <source src="sample3.mp4" type="video/mp4">
+        </video>
+        Slide 3
+      </div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need scrollbar 
+    <div class="swiper-scrollbar"></div>
+    -->
+  </div>
+
+  <section>
+    <ul class="navigation">
+      <li onclick="filterSlides('group1')"><img src="thumb1.png"></li>
+      <li onclick="filterSlides('group2')"><img src="thumb2.png"></li>
+      <li onclick="filterSlides('group2')"><img src="thumb3.png"></li>
+      <li onclick="filterSlides('group1')"><img src="thumb4.png"></li>
+    </ul>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      direction: 'vertical',
+      speed: 1000,
+      slidesPerView: 1,
+      spaceBetween: 30,
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+
+    function filterSlides(category) {
+      // Ocultar todas las diapositivas
+      const slides = document.querySelectorAll('.swiper-slide');
+      slides.forEach(slide => {
+        slide.classList.add('hidden');
+      });
+
+      // Mostrar solo las diapositivas que coinciden con la categoría seleccionada
+      const filteredSlides = document.querySelectorAll(`.swiper-slide[data-category="${category}"]`);
+      filteredSlides.forEach(slide => {
+        slide.classList.remove('hidden');
+      });
+
+      // Reiniciar Swiper para que se ajuste a las diapositivas visibles
+      swiper.update();
+    }
+  </script>
+
+</body>
+
+</html>
