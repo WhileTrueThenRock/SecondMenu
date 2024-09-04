@@ -6,15 +6,19 @@
 
 .swiper-pagination {
     position: absolute;
-    right: 10px;
+    left: 10px !important;
+    /* Forzar la posición a la izquierda */
     top: 50%;
     transform: translateY(-50%);
     width: 10px;
 }
 
 .swiper-pagination-bullet {
-    opacity: 1;
+    height: 32px;
+    background-image: linear-gradient(180deg, #f09819 0%, #ff512f 100%);
+    border-radius: 14px;
 }
+
 
 .swiper-slide video {
     position: absolute;
@@ -26,47 +30,168 @@
     pointer-events: none;
 }
 
-
-section .navigation {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
+.navigation {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: transform 0.3s ease;
 }
 
-section .navigation li {
+
+.container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.horizontal-scroll {
+    width: 250px;
+    height: 80px;
+    background-color: lightgray;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.nav-arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 101;
+    /* Asegura que las flechas estén por encima de otros elementos */
+    transition: background-color 0.3s ease;
+}
+
+.nav-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    margin-right: 10px;
+}
+
+.next {
+    margin-left: 10px;
+}
+
+
+
+div .navigation li {
     list-style: none;
     cursor: pointer;
     margin: 0 10px;
     border-radius: 4px;
     padding: 3px 3px 0;
     opacity: 0.7;
+    flex:  0 0 60px;
 }
 
-section .navigation li img {
+div .navigation li img {
     width: 50px;
     transition: 0.5s;
 }
 
-section .navigation li img:hover {
+div .navigation li img:hover {
     width: 100px;
 }
 
+
 .hidden {
     display: none !important;
-  }
-  
+}
+
+.swiper-slide {
+    position: relative;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#categories {
+    color: white;
+    z-index: 10;
+    position: absolute;
+    top: 50px;
+    left: 150px;
+
+}
+
+.dish-info {
+    color: white;
+    bottom: 100px;
+    left: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%;
+    z-index: 10;
+    /* Asegura que la información esté por encima del video */
+    position: absolute;
+    text-align: left;
+    /* Asegura que el texto esté alineado a la izquierda */
+
+}
+
+#verMas1,
+#verMas2,
+#verMas3 {
+    background-color: transparent;
+    color: #53a7ec;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    left: -5px;
+}
+
+#verMenos1,
+#verMenos2,
+#verMenos3 {
+    background-color: transparent;
+    color: #53a7ec;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    left: 25px;
+}
+
+.allergens {
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    left: -5px;
+}
+
+
+
+
 /* Ocultar controles en navegadores WebKit (Chrome, Safari, etc.) */
 video::-webkit-media-controls {
     display: none !important;
 }
+
 video::-webkit-media-controls-enclosure {
     display: none !important;
 }
+
 video::-webkit-media-controls-panel {
     display: none !important;
 }

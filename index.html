@@ -16,27 +16,62 @@
   <div class="swiper">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
-      <!-- Slides -->
+      <!-- Slide 1 -->
       <div class="swiper-slide" data-category="group1">
         <div class="content" data-content="five">
+          <h2 id="categories">Entrantes</h2>
           <video id="slider" autoplay muted loop playsinline>
             <source src="sample.mp4" type="video/mp4">
           </video>
         </div>
+        <div class="dish-info" id="dish1">
+          <h3>Plato 1</h3>
+          <p>Cosas verdes 500 g</p>
+          <button id="verMas1" onclick="toggleAllergens('allergens1','verMas1','verMenos1')">Ver más</button>
+          <div class="allergens" id="allergens1" style="display: none;">
+            <p>Alergenos:</p>
+            <p>Gluten, Lactosa</p>
+          </div>
+          <button id="verMenos1" onclick="toggleAllergens('allergens1', 'verMas1', 'verMenos1')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
       </div>
+      <!-- Slide 2 -->
       <div class="swiper-slide" data-category="group2">
         <video id="slider" autoplay muted loop playsinline>
           <source src="sample2.mp4" type="video/mp4">
         </video>
-        Slide 2
+        <div class="dish-info" id="dish2">
+          <h3>Plato 2</h3>
+          <p>Thumbs up 500 g</p>
+          <button id="verMas2" onclick="toggleAllergens('allergens2','verMas2','verMenos2')">Ver más</button>
+          <div class="allergens" id="allergens2" style="display: none;">
+            <p>Alergenos:</p>
+            <p>PESCADO</p>
+          </div>
+          <button id="verMenos2" onclick="toggleAllergens('allergens2', 'verMas2', 'verMenos2')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
       </div>
+      <!-- Slide 3 -->
+
       <div class="swiper-slide" data-category="group2">
         <video id="slider" autoplay muted loop playsinline>
           <source src="sample3.mp4" type="video/mp4">
         </video>
-        Slide 3
+
+        <div class="dish-info" id="dish3">
+          <h3>Plato 3</h3>
+          <p>Foto 500 g</p>
+          <button id="verMas3" onclick="toggleAllergens('allergens3','verMas3','verMenos3')">Ver más</button>
+          <div class="allergens" id="allergens3" style="display: none;">
+            <p>Alergenos:</p>
+            <p>NUECES, frutos secos</p>
+          </div>
+          <button id="verMenos3" onclick="toggleAllergens('allergens3', 'verMas3', 'verMenos3')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
       </div>
-      ...
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
@@ -46,14 +81,25 @@
     -->
   </div>
 
-  <section>
-    <ul class="navigation">
-      <li onclick="filterSlides('group1')"><img src="thumb1.png"></li>
-      <li onclick="filterSlides('group2')"><img src="thumb2.png"></li>
-      <li onclick="filterSlides('group2')"><img src="thumb3.png"></li>
-      <li onclick="filterSlides('group1')"><img src="thumb4.png"></li>
-    </ul>
-  </section>
+  <div class="container">
+
+    <button class="nav-arrow prev" id="btn-scroll-left" onclick="scrollList(-1)">&#9664;</button>
+
+    <div class="horizontal-scroll">
+
+      <ul class="navigation">
+        <li onclick="filterSlides('group1')"><img src="thumb1.png"></li>
+        <li onclick="filterSlides('group2')"><img src="thumb2.png"></li>
+        <li onclick="filterSlides('group2')"><img src="thumb3.png"></li>
+        <li onclick="filterSlides('group1')"><img src="thumb4.png"></li>
+        <li onclick="filterSlides('group2')"><img src="thumb3.png"></li>
+        <li onclick="filterSlides('group2')"><img src="thumb3.png"></li>
+      </ul>
+    </div>
+
+    <button class="nav-arrow next" id="btn-scroll-right" onclick="scrollList(1)">&#9654;</button>
+
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
@@ -86,6 +132,53 @@
       swiper.update();
     }
   </script>
+  <script>
+    function toggleAllergens(allergensId, viewMoreId, viewLessId) {
+      const allergensDiv = document.getElementById(allergensId);
+      const viewMore = document.getElementById(viewMoreId);
+      const viewLess = document.getElementById(viewLessId);
+
+      if (allergensDiv.style.display === 'none') {
+        allergensDiv.style.display = 'block';
+        viewMore.style.display = 'none';
+        viewLess.style.display = 'inline-block';
+      } else {
+        allergensDiv.style.display = 'none';
+        viewMore.style.display = 'inline-block';
+        viewLess.style.display = 'none';
+      }
+    }
+
+  </script>
+
+  <script>
+    let scrollAmount = 0;
+    const scrollStep = 120; // Ajusta este valor para que se desplace un elemento a la vez
+
+    function scrollList(direction) {
+      const list = document.querySelector('.navigation');
+      const listWidth = list.scrollWidth;
+      const containerWidth = document.querySelector('.horizontal-scroll').clientWidth;
+
+      if (direction === 1) {
+        // Desplazar hacia la derecha
+        scrollAmount += scrollStep;
+        if (scrollAmount > listWidth - containerWidth) {
+          scrollAmount = listWidth - containerWidth; // No permite sobrepasar el final
+        }
+      } else {
+        // Desplazar hacia la izquierda
+        scrollAmount -= scrollStep;
+        if (scrollAmount < 0) {
+          scrollAmount = 0; // No permite sobrepasar el inicio
+        }
+      }
+
+      list.style.transform = `translateX(-${scrollAmount}px)`;
+    }
+
+  </script>
+
 
 </body>
 
