@@ -53,7 +53,6 @@
 .horizontal-scroll {
     width: 250px;
     height: 80px;
-    background-color: lightgray;
     border-radius: 5px;
     overflow: hidden;
     display: flex;
@@ -100,12 +99,12 @@ div .navigation li {
 }
 
 div .navigation li img {
-    width: 50px;
+    width: 40px;
     transition: 0.5s;
 }
 
 div .navigation li img:hover {
-    width: 100px;
+    width: 60px;
 }
 
 
@@ -134,7 +133,7 @@ div .navigation li img:hover {
 
 .dish-info {
     color: white;
-    bottom: 100px;
+    bottom: 300px;
     left: 15px;
     padding: 15px;
     border-radius: 10px;
