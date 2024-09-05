@@ -8,10 +8,14 @@
   <title>El Quijote xd</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+  <button id="order"><a href="order.html"><i class="fa-duotone fa-solid fa-list-ol"></i></a></button>
+  
 
   <!-- Slider main container -->
   <div class="swiper">
@@ -20,12 +24,14 @@
       <!-- Slide 1 -->
       <div class="swiper-slide" data-category="group1">
         <div class="content" data-content="five">
+
           <h2 id="categories">Entrantes</h2>
           <video id="slider" autoplay muted loop playsinline>
             <source src="sample.mp4" type="video/mp4">
           </video>
         </div>
         <div class="dish-info" id="dish1">
+          <button id="add"><i class="fa-solid fa-circle-plus"></i></button>
           <h3>Plato 1</h3>
           <p>Cosas verdes 500 g</p>
           <button id="verMas1" onclick="toggleAllergens('allergens1','verMas1','verMenos1')">Ver más
@@ -36,10 +42,10 @@
             <p>Gluten, Lactosa</p>
           </div>
           <button id="verMenos1" onclick="toggleAllergens('allergens1', 'verMas1', 'verMenos1')"
-            style="display:none;">Ver menos 
+            style="display:none;">Ver menos
             <i class="fa-sharp-duotone fa-solid fa-angle-up"></i>
-          </button> 
-           
+          </button>
+
         </div>
       </div>
       <!-- Slide 2 -->
@@ -49,6 +55,8 @@
           <source src="sample2.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish2">
+          <button id="add"><i class="fa-solid fa-circle-plus"></i></button>
+
           <h3>Plato 2</h3>
           <p>Thumbs up 500 g</p>
           <button id="verMas2" onclick="toggleAllergens('allergens2','verMas2','verMenos2')">Ver más</button>
@@ -68,6 +76,8 @@
         </video>
 
         <div class="dish-info" id="dish3">
+          <button id="add"><i class="fa-solid fa-circle-plus"></i></button>
+
           <h3>Plato 3</h3>
           <p>Foto 500 g</p>
           <button id="verMas3" onclick="toggleAllergens('allergens3','verMas3','verMenos3')">Ver más</button>
@@ -90,7 +100,7 @@
 
   <div class="container">
 
-    <button class="nav-arrow prev" id="btn-scroll-left" onclick="scrollList(-1)">&#9664;</button>
+    <button class="nav-arrow prev" id="btn-scroll-left" onclick="scrollList(-1)"><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
 
     <div class="horizontal-scroll">
 
@@ -104,7 +114,7 @@
       </ul>
     </div>
 
-    <button class="nav-arrow next" id="btn-scroll-right" onclick="scrollList(1)">&#9654;</button>
+    <button class="nav-arrow next" id="btn-scroll-right" onclick="scrollList(1)"><i class="fa-sharp fa-solid fa-arrow-right"></i></button>
 
   </div>
 
@@ -114,7 +124,7 @@
       direction: 'vertical',
       speed: 1000,
       slidesPerView: 1,
-      spaceBetween: 30,
+      spaceBetween: 0,
 
       pagination: {
         el: '.swiper-pagination',

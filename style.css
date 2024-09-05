@@ -1,7 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .swiper {
     width: 100%;
     height: 100vh;
     position: relative;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+   overflow: hidden; 
 }
 
 .swiper-pagination {
@@ -19,6 +31,19 @@
     border-radius: 14px;
 }
 
+.swiper-slide {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 
 .swiper-slide video {
     position: absolute;
@@ -27,6 +52,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border: none; 
     pointer-events: none;
 }
 
@@ -39,16 +67,22 @@
     transition: transform 0.3s ease;
 }
 
-
 .container {
+    background-color: rgb(221, 154, 99);
+    padding: 10px; /* Añade espacio alrededor del contenido */
+    width: 390px;
+    height: 75px;
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
     z-index: 100;
+    box-sizing: border-box; /* Incluye el borde en el tamaño */
 }
+
+
 
 .horizontal-scroll {
     width: 250px;
@@ -62,15 +96,13 @@
 }
 
 .nav-arrow {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
     color: white;
     border: none;
     padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
     border-radius: 50%;
+    font-size: 24px;
     z-index: 101;
-    /* Asegura que las flechas estén por encima de otros elementos */
     transition: background-color 0.3s ease;
 }
 
@@ -112,15 +144,38 @@ div .navigation li img:hover {
     display: none !important;
 }
 
-.swiper-slide {
-    position: relative;
-    display: flex;
-    padding: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+#order {
+    background-color: transparent; /* Fondo transparente */
+    font-size: 24px; /* Ajusta el tamaño del icono */
+    color: white;
+    border: none; /* Sin borde */
+    padding: 0; /* Sin relleno */
+    margin: 0; /* Sin márgenes */
+    cursor: pointer; /* Mostrar cursor de mano para indicar clic */
+    position: absolute;
+    top: 35px;
+    left: 350px;
+    z-index: 10;
 }
+
+#order a {
+    color: white;
+}
+
+#add {
+    background-color: transparent; /* Fondo transparente */
+    font-size: 34px; /* Ajusta el tamaño del icono */
+    color: rgb(252, 134, 0);
+    border: none; /* Sin borde */
+    padding: 0; /* Sin relleno */
+    margin: 0; /* Sin márgenes */
+    cursor: pointer; /* Mostrar cursor de mano para indicar clic */
+    position: absolute;
+    bottom: 45px;
+    left: 320px;
+    z-index: 10;
+}
+
 
 #categories {
     color: white;
