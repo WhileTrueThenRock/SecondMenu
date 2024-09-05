@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
   <title>El Quijote xd</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -27,13 +28,18 @@
         <div class="dish-info" id="dish1">
           <h3>Plato 1</h3>
           <p>Cosas verdes 500 g</p>
-          <button id="verMas1" onclick="toggleAllergens('allergens1','verMas1','verMenos1')">Ver más</button>
+          <button id="verMas1" onclick="toggleAllergens('allergens1','verMas1','verMenos1')">Ver más
+            <i class="fa-duotone fa-solid fa-angle-down"></i>
+          </button>
           <div class="allergens" id="allergens1" style="display: none;">
             <p>Alergenos:</p>
             <p>Gluten, Lactosa</p>
           </div>
           <button id="verMenos1" onclick="toggleAllergens('allergens1', 'verMas1', 'verMenos1')"
-            style="display:none;">Ver menos ⮟</button>
+            style="display:none;">Ver menos 
+            <i class="fa-sharp-duotone fa-solid fa-angle-up"></i>
+          </button> 
+           
         </div>
       </div>
       <!-- Slide 2 -->
