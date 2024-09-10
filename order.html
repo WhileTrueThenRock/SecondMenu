@@ -1,15 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-      
-        <title>El Quijote xd</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>El Quijote xd</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
 <body>
+    <button><a href="index.html"><i class="fa-solid fa-arrow-left"></a></i></button>
     <h2>Tu pedido</h2>
+    <div class="my-orders">
+
+    </div>
+
+    <script>
+        // Recuperar el carrito del localStorage
+        function loadOrders() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let ordersContainer = document.querySelector('.my-orders');
+
+            // Verificar si hay elementos en el carrito
+            if (cart.length > 0) {
+                cart.forEach((item, index) => {
+                    let orderElement = document.createElement('div');
+                    orderElement.innerHTML = `
+                    <img src="${item.imageUrl}" alt="${item.name}">
+                    <div class="text-container">
+                        <h3>${item.name}</h3>
+                        <p>${item.description}</p>
+                    </div>
+                    `;
+                    ordersContainer.appendChild(orderElement);
+                });
+            } else {
+                ordersContainer.innerHTML = '<p>No hay pedidos aún.</p>';
+            }
+        }
+
+        // Llamar a la función al cargar la página
+        window.onload = loadOrders;
+    </script>
+    <script>
+        // Recuperar el carrito del localStorage
+        function loadOrders() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let ordersContainer = document.querySelector('.my-orders');
+
+            if (cart.length > 0) {
+                cart.forEach((item, index) => {
+                    let orderElement = document.createElement('div');
+                    orderElement.className = 'order-item';
+                    orderElement.innerHTML = `
+                    <img src="${item.imageUrl}" alt="${item.name}" style="width: 100px; height: auto;">
+                    <div class="order-details">
+                        <h3>${item.name}</h3>
+                        <p>${item.description}</p>
+                        <div class="quantity-controls">
+                            <button class="decrement" onclick="updateQuantity('${item.name}', -1)">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <span class="quantity" id="quantity-${item.name}">1</span>
+                            <button class="increment" onclick="updateQuantity('${item.name}', 1)">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                        <button id="removeitem" onclick="removeItem('${item.name}')">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>      
+                  </div>
+                    `;
+                    ordersContainer.appendChild(orderElement);
+                });
+            } else {
+                ordersContainer.innerHTML = '<p>No hay pedidos aún.</p>';
+            }
+        }
+
+        function updateQuantity(name, change) {
+            let quantityElement = document.getElementById(`quantity-${name}`);
+            let currentQuantity = parseInt(quantityElement.innerText);
+            let newQuantity = currentQuantity + change;
+
+            if (newQuantity < 1) newQuantity = 1; // Evita cantidades menores a 1
+
+            quantityElement.innerText = newQuantity;
+
+            // Actualiza la cantidad en el carrito del localStorage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let itemIndex = cart.findIndex(item => item.name === name);
+
+            if (itemIndex !== -1) {
+                cart[itemIndex].quantity = newQuantity;
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+        }
+
+        window.onload = loadOrders;
+
+        function removeItem(dishName) {
+            // Obtener el carrito de localStorage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Filtrar el carrito para eliminar el item seleccionado
+            cart = cart.filter(item => item.name !== dishName);
+
+            // Guardar el carrito actualizado en localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Recargar la página o actualizar el contenido dinámicamente
+            window.location.reload(); // Opcional: recarga la página para mostrar los cambios
+        }
+
+    </script>
 </body>
+
 </html>

@@ -15,7 +15,7 @@
 
 <body>
   <button id="order"><a href="order.html"><i class="fa-duotone fa-solid fa-list-ol"></i></a></button>
-  
+
 
   <!-- Slider main container -->
   <div class="swiper">
@@ -31,9 +31,12 @@
           </video>
         </div>
         <div class="dish-info" id="dish1">
-          <button id="add"><i class="fa-solid fa-circle-plus"></i></button>
-          <h3>Plato 1</h3>
+          <button id="add" data-dish-name="Spaghetti a la carbonara" onclick="toggleOrder(this, 'Spaghetti a la carbonara', 'Cosas verdes 500g', 'sample.png')">
+            <i class="fa-solid fa-circle-plus"></i>
+          </button>
+          <h3>Spaghetti a la carbonara</h3>
           <p>Cosas verdes 500 g</p>
+          <p>22.50€</p>
           <button id="verMas1" onclick="toggleAllergens('allergens1','verMas1','verMenos1')">Ver más
             <i class="fa-duotone fa-solid fa-angle-down"></i>
           </button>
@@ -55,7 +58,8 @@
           <source src="sample2.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish2">
-          <button id="add"><i class="fa-solid fa-circle-plus"></i></button>
+          <button id="add" data-dish-name="Plato 2" onclick="toggleOrder(this, 'Plato 2', 'thumbsup 500g', 'sample2.png')"><i
+              class="fa-solid fa-circle-plus"></i></button>
 
           <h3>Plato 2</h3>
           <p>Thumbs up 500 g</p>
@@ -76,7 +80,8 @@
         </video>
 
         <div class="dish-info" id="dish3">
-          <button id="add"><i class="fa-solid fa-circle-plus"></i></button>
+          <button id="add" data-dish-name="Plato 3" onclick="toggleOrder(this, 'Plato 3', 'foto 500g', 'sample3.png')"><i
+              class="fa-solid fa-circle-plus"></i></button>
 
           <h3>Plato 3</h3>
           <p>Foto 500 g</p>
@@ -100,7 +105,8 @@
 
   <div class="container">
 
-    <button class="nav-arrow prev" id="btn-scroll-left" onclick="scrollList(-1)"><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
+    <button class="nav-arrow prev" id="btn-scroll-left" onclick="scrollList(-1)"><i
+        class="fa-sharp fa-solid fa-arrow-left"></i></button>
 
     <div class="horizontal-scroll">
 
@@ -114,7 +120,8 @@
       </ul>
     </div>
 
-    <button class="nav-arrow next" id="btn-scroll-right" onclick="scrollList(1)"><i class="fa-sharp fa-solid fa-arrow-right"></i></button>
+    <button class="nav-arrow next" id="btn-scroll-right" onclick="scrollList(1)"><i
+        class="fa-sharp fa-solid fa-arrow-right"></i></button>
 
   </div>
 
@@ -122,7 +129,7 @@
   <script>
     const swiper = new Swiper('.swiper', {
       direction: 'vertical',
-      speed: 1000,
+      speed: 200,
       slidesPerView: 1,
       spaceBetween: 0,
 
@@ -194,6 +201,56 @@
       list.style.transform = `translateX(-${scrollAmount}px)`;
     }
 
+  </script>
+
+  <script>
+    // Función que revisa el carrito en localStorage y actualiza los íconos de los botones cuando la página se carga.
+    document.addEventListener('DOMContentLoaded', () => {
+      // Obtener el carrito de localStorage (o crear uno si no existe)
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Recorremos todos los botones "add" en la página
+      document.querySelectorAll('button#add').forEach(button => {
+        const dishName = button.getAttribute('data-dish-name'); // Usamos un atributo data para identificar el plato
+
+        // Verificamos si el plato ya está en el carrito
+        let dishInCart = cart.find(item => item.name === dishName);
+        if (dishInCart) {
+          // Si está en el carrito, mostramos el icono de check
+          button.innerHTML = '<i class="fa-solid fa-check"></i>';
+        } else {
+          // Si no está en el carrito, mostramos el icono de agregar
+          button.innerHTML = '<i class="fa-solid fa-circle-plus"></i>';
+        }
+      });
+    });
+
+    // Función para agregar platos al carrito usando localStorage
+    function toggleOrder(button, dishName, description, imageUrl) { // no funciona decirle al chat
+    const item = { name: dishName, description: description, imageUrl: imageUrl };
+
+      // Obtener el carrito de localStorage (o crear uno si no existe)
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Buscar si el plato ya está en el carrito
+      let dishIndex = cart.findIndex(item => item.name === dishName);
+
+      if (dishIndex !== -1) {
+        // Si ya está en el carrito, lo quitamos
+        cart.splice(dishIndex, 1);
+        button.innerHTML = '<i class="fa-solid fa-circle-plus"></i>';
+
+      } else {
+        // Si no está en el carrito, lo agregamos
+        cart.push({ name: dishName, description: description, imageUrl:imageUrl });
+        button.innerHTML = '<i class="fa-solid fa-check"></i>';
+
+      }
+
+      // Guardar de nuevo el carrito actualizado en localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+    }
   </script>
 
 
