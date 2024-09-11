@@ -4,18 +4,19 @@
     box-sizing: border-box;
 }
 
-.swiper {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-
 html,
 body {
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
 
 .swiper-pagination {
     position: absolute;
@@ -271,6 +272,6 @@ video::-moz-media-controls {
     display: none !important;
 }
 
-button, i {
+button, i, li {
     touch-action: manipulation; /* Previene el zoom en toques dobles */
   }

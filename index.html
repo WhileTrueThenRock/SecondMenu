@@ -17,8 +17,8 @@
   <button id="order"><a href="order.html"><i class="fa-duotone fa-solid fa-list-ol"></i></a></button>
 
 
-  <!-- Slider main container -->
-  <div class="swiper">
+   <!-- Slider main container -->
+   <div class="swiper">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slide 1 -->
@@ -53,20 +53,20 @@
       </div>
       <!-- Slide 2 -->
       <div class="swiper-slide" data-category="group2">
-        <h2 id="categories">Ensaladas</h2>
+        <h2 id="categories">Pastas</h2>
         <video id="slider" autoplay muted loop playsinline>
-          <source src="sample2.mp4" type="video/mp4">
+          <source src="macarrones1.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish2">
-          <button id="add" data-dish-name="Plato 2" onclick="toggleOrder(this, 'Plato 2', 'thumbsup 500g', 'sample2.png')"><i
+          <button id="add" data-dish-name="Macarrones con carne picada y judías" onclick="toggleOrder(this, 'Macarrones con carne picada y judías', '500 g de carne picada y judías 9.50€', 'macarrones1foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
 
-          <h3>Plato 2</h3>
-          <p>Thumbs up 500 g</p>
+          <h3>Macarrones con carne picada y judías</h3>
+          <p>500 g de carne picada y judías 9.50€</p>
           <button id="verMas2" onclick="toggleAllergens('allergens2','verMas2','verMenos2')">Ver más</button>
           <div class="allergens" id="allergens2" style="display: none;">
             <p>Alergenos:</p>
-            <p>PESCADO</p>
+            <p>Gluten</p>
           </div>
           <button id="verMenos2" onclick="toggleAllergens('allergens2', 'verMas2', 'verMenos2')"
             style="display:none;">Ver menos ⮟</button>
@@ -76,24 +76,110 @@
 
       <div class="swiper-slide" data-category="group2">
         <video id="slider" autoplay muted loop playsinline>
-          <source src="sample3.mp4" type="video/mp4">
+          <source src="macarrones2.mp4" type="video/mp4">
         </video>
 
         <div class="dish-info" id="dish3">
-          <button id="add" data-dish-name="Plato 3" onclick="toggleOrder(this, 'Plato 3', 'foto 500g', 'sample3.png')"><i
+          <button id="add" data-dish-name="Rigatoni con tomate" onclick="toggleOrder(this, 'Rigatoni con tomate', '8.50€\nPasta con salsa del chef', 'macarrones2foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
 
-          <h3>Plato 3</h3>
-          <p>Foto 500 g</p>
+          <h3>Rigatoni con tomate</h3>
+          <p>Rigatoni con tomate', '8.50€\nPasta con salsa del chef</p>
           <button id="verMas3" onclick="toggleAllergens('allergens3','verMas3','verMenos3')">Ver más</button>
           <div class="allergens" id="allergens3" style="display: none;">
             <p>Alergenos:</p>
-            <p>NUECES, frutos secos</p>
+            <p>Perejil...etc</p>
           </div>
           <button id="verMenos3" onclick="toggleAllergens('allergens3', 'verMas3', 'verMenos3')"
             style="display:none;">Ver menos ⮟</button>
         </div>
       </div>
+
+      <div class="swiper-slide" data-category="group2">
+        <video id="slider" autoplay muted loop playsinline>
+          <source src="macarrones3.mp4" type="video/mp4">
+        </video>
+
+        <div class="dish-info" id="dish4">
+          <button id="add" data-dish-name="Macarrones con bacon" onclick="toggleOrder(this, 'Macarrones con bacon', '8.50€', 'macarrones3foto.png')"><i
+              class="fa-solid fa-circle-plus"></i></button>
+
+          <h3>Macarrones con bacon</h3>
+          <p>8.50€</p>
+          <button id="verMas3" onclick="toggleAllergens('allergens3','verMas3','verMenos3')">Ver más</button>
+          <div class="allergens" id="allergens3" style="display: none;">
+            <p>Alergenos:</p>
+            <p>Bacon...etc</p>
+          </div>
+          <button id="verMenos3" onclick="toggleAllergens('allergens3', 'verMas3', 'verMenos3')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
+      </div>
+
+      
+      <div class="swiper-slide" data-category="group3">
+        <video id="slider" autoplay muted loop playsinline>
+          <source src="fish1.mp4" type="video/mp4">
+        </video>
+
+        <div class="dish-info" id="dish5">
+          <button id="add" data-dish-name="Dorada a la plancha" onclick="toggleOrder(this, 'Dorada a la plancha', '10.50€', 'fish1foto.png')"><i
+              class="fa-solid fa-circle-plus"></i></button>
+
+          <h3>Dorada a la plancha</h3>
+          <p>10.50€</p>
+          <button id="verMas3" onclick="toggleAllergens('allergens3','verMas3','verMenos3')">Ver más</button>
+          <div class="allergens" id="allergens3" style="display: none;">
+            <p>Alergenos:</p>
+            <p>Dorada...etc</p>
+          </div>
+          <button id="verMenos3" onclick="toggleAllergens('allergens3', 'verMas3', 'verMenos3')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
+      </div>
+
+      <div class="swiper-slide" data-category="group3">
+        <video id="slider" autoplay muted loop playsinline>
+          <source src="fish2.mp4" type="video/mp4">
+        </video>
+
+        <div class="dish-info" id="dish6">
+          <button id="add" data-dish-name="Trucha con picadillo" onclick="toggleOrder(this, 'Trucha con picadillo', '15.50€', 'fish2foto.png')"><i
+              class="fa-solid fa-circle-plus"></i></button>
+
+          <h3>Trucha con picadillo</h3>
+          <p>15.50€</p>
+          <button id="verMas3" onclick="toggleAllergens('allergens3','verMas3','verMenos3')">Ver más</button>
+          <div class="allergens" id="allergens3" style="display: none;">
+            <p>Alergenos:</p>
+            <p>Trucha...etc</p>
+          </div>
+          <button id="verMenos3" onclick="toggleAllergens('allergens3', 'verMas3', 'verMenos3')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
+      </div>
+
+      <div class="swiper-slide" data-category="group3">
+        <video id="slider" autoplay muted loop playsinline>
+          <source src="fish3.mp4" type="video/mp4">
+        </video>
+
+        <div class="dish-info" id="dish7">
+          <button id="add" data-dish-name="Pescado a la parrilla" onclick="toggleOrder(this, 'Pescado a la parrilla', '13.50€', 'fish3foto.png')"><i
+              class="fa-solid fa-circle-plus"></i></button>
+
+          <h3>Pescado a la parrilla</h3>
+          <p>13.50€</p>
+          <button id="verMas3" onclick="toggleAllergens('allergens3','verMas3','verMenos3')">Ver más</button>
+          <div class="allergens" id="allergens3" style="display: none;">
+            <p>Alergenos:</p>
+            <p>Pescado...etc</p>
+          </div>
+          <button id="verMenos3" onclick="toggleAllergens('allergens3', 'verMas3', 'verMenos3')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
+      </div>
+
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
@@ -112,11 +198,9 @@
 
       <ul class="navigation">
         <li onclick="filterSlides('group1')"><img src="thumb1.png"></li>
-        <li onclick="filterSlides('group2')"><img src="thumb2.png"></li>
-        <li onclick="filterSlides('group2')"><img src="thumb3.png"></li>
-        <li onclick="filterSlides('group1')"><img src="thumb4.png"></li>
-        <li onclick="filterSlides('group2')"><img src="thumb3.png"></li>
-        <li onclick="filterSlides('group2')"><img src="thumb3.png"></li>
+        <li onclick="filterSlides('group2')"><img src="thumb5.png"></li>
+        <li onclick="filterSlides('group3')"><img src="thumb6.png"></li>
+        <li onclick="filterSlides('group1')"><img src="thumb3.png"></li>
       </ul>
     </div>
 
@@ -138,6 +222,7 @@
         clickable: true,
       },
     });
+    
 
     function filterSlides(category) {
       // Ocultar todas las diapositivas
@@ -152,9 +237,34 @@
         slide.classList.remove('hidden');
       });
 
+        // Guardar la categoría seleccionada en localStorage
+        localStorage.setItem('lastCategory', category);
+
       // Reiniciar Swiper para que se ajuste a las diapositivas visibles
       swiper.update();
     }
+
+        // Función para guardar la diapositiva actual
+        function saveCurrentSlide(category, slideIndex) {
+        localStorage.setItem('lastCategory', category);
+        localStorage.setItem('lastSlideIndex', slideIndex);
+    }
+        // Ejecuta la función de filtro cuando la página carga para mostrar solo 'group1'
+        window.onload = () => {
+        const lastCategory = localStorage.getItem('lastCategory') || 'group1'; // Obtener la última categoría o 'group1' por defecto
+        const lastSlideIndex = localStorage.getItem('lastSlideIndex') || 0; // Obtener el último índice o 0 por defecto
+
+        filterSlides(lastCategory); // Filtrar por la categoría guardada
+
+        // Después de filtrar, ir a la diapositiva específica
+        swiper.slideTo(lastSlideIndex);
+    };
+    swiper.on('slideChange', () => {
+        const currentSlide = swiper.realIndex; // Obtener el índice actual
+        const currentCategory = localStorage.getItem('lastCategory'); // Obtener la categoría actual
+        saveCurrentSlide(currentCategory, currentSlide); // Guardar la categoría y el índice
+    });
+
   </script>
   <script>
     function toggleAllergens(allergensId, viewMoreId, viewLessId) {
@@ -242,7 +352,7 @@
 
       } else {
         // Si no está en el carrito, lo agregamos
-        cart.push({ name: dishName, description: description, imageUrl:imageUrl });
+        cart.push({ name: dishName, description: description, imageUrl:imageUrl, quantity: 1 });
         button.innerHTML = '<i class="fa-solid fa-check"></i>';
 
       }
