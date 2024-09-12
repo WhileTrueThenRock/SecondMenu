@@ -21,34 +21,32 @@
    <div class="swiper">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
-      <!-- Slide 1 -->
+      <!-- Plato 1 entrantes-->
       <div class="swiper-slide" data-category="group1">
         <div class="content" data-content="five">
 
           <h2 id="categories">Entrantes</h2>
           <video id="slider" autoplay muted loop playsinline>
-            <source src="sample.mp4" type="video/mp4">
+            <source src="entrante1.mp4" type="video/mp4">
           </video>
         </div>
         <div class="dish-info" id="dish1">
-          <button id="add" data-dish-name="Spaghetti a la carbonara" onclick="toggleOrder(this, 'Spaghetti a la carbonara', 'Cosas verdes 500g', 'sample.png')">
+          <button id="add" data-dish-name="Alitas en salsa" onclick="toggleOrder(this, 'Alitas en salsa', '8.50€<br>10.50 con salsa', 'entrante1foto.png')">
             <i class="fa-solid fa-circle-plus"></i>
           </button>
-          <h3>Spaghetti a la carbonara</h3>
-          <p>Cosas verdes 500 g</p>
-          <p>22.50€</p>
+          <h3>Alitas en salsa</h3>
+          <p>8.50€<br>10€ con salsa</p>
           <button id="verMas1" onclick="toggleAllergens('allergens1','verMas1','verMenos1')">Ver más
             <i class="fa-duotone fa-solid fa-angle-down"></i>
           </button>
           <div class="allergens" id="allergens1" style="display: none;">
             <p>Alergenos:</p>
-            <p>Gluten, Lactosa</p>
+            <p>Lima</p>
           </div>
           <button id="verMenos1" onclick="toggleAllergens('allergens1', 'verMas1', 'verMenos1')"
             style="display:none;">Ver menos
             <i class="fa-sharp-duotone fa-solid fa-angle-up"></i>
           </button>
-
         </div>
       </div>
       <!-- Slide 2 -->
@@ -78,7 +76,7 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="macarrones2.mp4" type="video/mp4">
         </video>
-
+        <h2 id="categories">Pastas</h2>
         <div class="dish-info" id="dish3">
           <button id="add" data-dish-name="Rigatoni con tomate" onclick="toggleOrder(this, 'Rigatoni con tomate', '8.50€\nPasta con salsa del chef', 'macarrones2foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
@@ -99,19 +97,19 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="macarrones3.mp4" type="video/mp4">
         </video>
-
+        <h2 id="categories">Pastas</h2>
         <div class="dish-info" id="dish4">
           <button id="add" data-dish-name="Macarrones con bacon" onclick="toggleOrder(this, 'Macarrones con bacon', '8.50€', 'macarrones3foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
 
           <h3>Macarrones con bacon</h3>
           <p>8.50€</p>
-          <button id="verMas3" onclick="toggleAllergens('allergens3','verMas3','verMenos3')">Ver más</button>
-          <div class="allergens" id="allergens3" style="display: none;">
+          <button id="verMas4" onclick="toggleAllergens('allergens4','verMas4','verMenos4')">Ver más</button>
+          <div class="allergens" id="allergens4" style="display: none;">
             <p>Alergenos:</p>
             <p>Bacon...etc</p>
           </div>
-          <button id="verMenos3" onclick="toggleAllergens('allergens3', 'verMas3', 'verMenos3')"
+          <button id="verMenos4" onclick="toggleAllergens('allergens4', 'verMas4', 'verMenos4')"
             style="display:none;">Ver menos ⮟</button>
         </div>
       </div>
@@ -121,19 +119,19 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="fish1.mp4" type="video/mp4">
         </video>
-
+        <h2 id="categories">Pescados</h2>
         <div class="dish-info" id="dish5">
           <button id="add" data-dish-name="Dorada a la plancha" onclick="toggleOrder(this, 'Dorada a la plancha', '10.50€', 'fish1foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
 
           <h3>Dorada a la plancha</h3>
           <p>10.50€</p>
-          <button id="verMas3" onclick="toggleAllergens('allergens3','verMas3','verMenos3')">Ver más</button>
-          <div class="allergens" id="allergens3" style="display: none;">
+          <button id="verMas5" onclick="toggleAllergens('allergens5','verMas5','verMenos5')">Ver más</button>
+          <div class="allergens" id="allergens5" style="display: none;">
             <p>Alergenos:</p>
             <p>Dorada...etc</p>
           </div>
-          <button id="verMenos3" onclick="toggleAllergens('allergens3', 'verMas3', 'verMenos3')"
+          <button id="verMenos5" onclick="toggleAllergens('allergens5', 'verMas5', 'verMenos5')"
             style="display:none;">Ver menos ⮟</button>
         </div>
       </div>
@@ -142,19 +140,19 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="fish2.mp4" type="video/mp4">
         </video>
-
+        <h2 id="categories">Pescados</h2>
         <div class="dish-info" id="dish6">
           <button id="add" data-dish-name="Trucha con picadillo" onclick="toggleOrder(this, 'Trucha con picadillo', '15.50€', 'fish2foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
 
           <h3>Trucha con picadillo</h3>
           <p>15.50€</p>
-          <button id="verMas3" onclick="toggleAllergens('allergens3','verMas3','verMenos3')">Ver más</button>
-          <div class="allergens" id="allergens3" style="display: none;">
+          <button id="verMas6" onclick="toggleAllergens('allergens6','verMas6','verMenos6')">Ver más</button>
+          <div class="allergens" id="allergens6" style="display: none;">
             <p>Alergenos:</p>
             <p>Trucha...etc</p>
           </div>
-          <button id="verMenos3" onclick="toggleAllergens('allergens3', 'verMas3', 'verMenos3')"
+          <button id="verMenos6" onclick="toggleAllergens('allergens6','verMas6','verMenos6')"
             style="display:none;">Ver menos ⮟</button>
         </div>
       </div>
@@ -163,24 +161,195 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="fish3.mp4" type="video/mp4">
         </video>
-
+        <h2 id="categories">Pescados</h2>
         <div class="dish-info" id="dish7">
           <button id="add" data-dish-name="Pescado a la parrilla" onclick="toggleOrder(this, 'Pescado a la parrilla', '13.50€', 'fish3foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
 
           <h3>Pescado a la parrilla</h3>
           <p>13.50€</p>
-          <button id="verMas3" onclick="toggleAllergens('allergens3','verMas3','verMenos3')">Ver más</button>
-          <div class="allergens" id="allergens3" style="display: none;">
+          <button id="verMas7" onclick="toggleAllergens('allergens7','verMas7','verMenos7')">Ver más</button>
+          <div class="allergens" id="allergens7" style="display: none;">
             <p>Alergenos:</p>
             <p>Pescado...etc</p>
           </div>
-          <button id="verMenos3" onclick="toggleAllergens('allergens3', 'verMas3', 'verMenos3')"
+          <button id="verMenos7" onclick="toggleAllergens('allergens7','verMas7','verMenos7')"
             style="display:none;">Ver menos ⮟</button>
         </div>
       </div>
 
+      <div class="swiper-slide" data-category="group1">
+        <video id="slider" autoplay muted loop playsinline>
+          <source src="entrante2.mp4" type="video/mp4">
+        </video>
+        <h2 id="categories">Entrantes</h2>
+
+        <div class="dish-info" id="dish8">
+          <button id="add" data-dish-name="Variedad de embutidos" onclick="toggleOrder(this, 'Variedad de embutidos', '7.50€ - 2 personas<br>14€ - 4 personas', 'entrante2foto.png')"><i
+              class="fa-solid fa-circle-plus"></i></button>
+
+          <h3>Variedad de embutidos</h3>
+          <p>Variedad de embutidos', '7.50€ - 2 personas<br>14€ - 4 personas</p>
+          <button id="verMas8" onclick="toggleAllergens('allergens8','verMas8','verMenos8')">Ver más</button>
+          <div class="allergens" id="allergens8" style="display: none;">
+            <p>Alergenos:</p>
+            <p>Cacahuete,lactosa,jamón...etc</p>
+          </div>
+          <button id="verMenos8" onclick="toggleAllergens('allergens8','verMas8','verMenos8')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
+      </div>
+
+      <div class="swiper-slide" data-category="group1">
+        <video id="slider" autoplay muted loop playsinline>
+          <source src="entrante3.mp4" type="video/mp4">
+        </video>
+        <h2 id="categories">Entrantes</h2>
+        <div class="dish-info" id="dish9">
+          <button id="add" data-dish-name="Croquetas cremosas" onclick="toggleOrder(this, 'Croquetas cremosas', '6€ - 6 unidades', 'entrante3foto.png')"><i
+              class="fa-solid fa-circle-plus"></i></button>
+
+          <h3>Croquetas cremosas</h3>
+          <p>6€ - 6 unidades</p>
+          <button id="verMas9" onclick="toggleAllergens('allergens9','verMas9','verMenos9')">Ver más</button>
+          <div class="allergens" id="allergens9" style="display: none;">
+            <p>Alergenos:</p>
+            <p>Lactosa, jamón...</p>
+          </div>
+          <button id="verMenos9" onclick="toggleAllergens('allergens9','verMas9','verMenos9')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
+      </div>
+    <!-- carnes -->
+      <div class="swiper-slide" data-category="group4">
+        <video id="slider" autoplay muted loop playsinline>
+          <source src="carne1.mp4" type="video/mp4">
+        </video>
+        <h2 id="categories">Carnes</h2>
+        <div class="dish-info" id="dish10">
+          <button id="add" data-dish-name="Solomillo de cerdo" onclick="toggleOrder(this, 'Solomillo de cerdo', '12.50€', 'carne1foto.png')"><i
+              class="fa-solid fa-circle-plus"></i></button>
+
+          <h3>Solomillo de cerdo</h3>
+          <p>12.50€</p>
+          <button id="verMas10" onclick="toggleAllergens('allergens10','verMas10','verMenos10')">Ver más</button>
+          <div class="allergens" id="allergens10" style="display: none;">
+            <p>Alergenos:</p>
+            <p>Cerdo...etc</p>
+          </div>
+          <button id="verMenos10" onclick="toggleAllergens('allergens10','verMas10','verMenos10')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
+      </div>
+
+      <div class="swiper-slide" data-category="group4">
+        <video id="slider" autoplay muted loop playsinline>
+          <source src="carne2.mp4" type="video/mp4">
+        </video>
+        <h2 id="categories">Carnes</h2>
+        <div class="dish-info" id="dish11">
+          <button id="add" data-dish-name="Pollo a la brasa" onclick="toggleOrder(this, 'Pollo a la brasa', '11.50€<br> Acompañado de brócoli y arroz', 'carne2foto.png')"><i
+              class="fa-solid fa-circle-plus"></i></button>
+
+          <h3>Pollo a la brasa</h3>
+          <p>11.50€<br> Acompañado de brócoli y arroz</p>
+          <button id="verMas11" onclick="toggleAllergens('allergens11','verMas11','verMenos11')">Ver más</button>
+          <div class="allergens" id="allergens11" style="display: none;">
+            <p>Alergenos:</p>
+            <p>Pollo...etc</p>
+          </div>
+          <button id="verMenos11" onclick="toggleAllergens('allergens11','verMas11','verMenos11')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
+      </div>
+
+      <div class="swiper-slide" data-category="group4">
+        <video id="slider" autoplay muted loop playsinline>
+          <source src="carne3.mp4" type="video/mp4">
+        </video>
+        <h2 id="categories">Carnes</h2>
+        <div class="dish-info" id="dish12">
+          <button id="add" data-dish-name="Entrecot con salsa" onclick="toggleOrder(this, 'Entrecot con salsa', '14.50€<br> Acompañado de ensalada', 'carne3foto.png')"><i
+              class="fa-solid fa-circle-plus"></i></button>
+
+          <h3>Entrecot con salsa</h3>
+          <p>14.50€<br> Acompañado de ensalada</p>
+          <button id="verMas12" onclick="toggleAllergens('allergens12','verMas12','verMenos12')">Ver más</button>
+          <div class="allergens" id="allergens12" style="display: none;">
+            <p>Alergenos:</p>
+            <p>Salsa...etc</p>
+          </div>
+          <button id="verMenos12" onclick="toggleAllergens('allergens12','verMas12','verMenos12')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
+      </div>
+
+    <!-- Postres -->
+    <div class="swiper-slide" data-category="group5">
+      <video id="slider" autoplay muted loop playsinline>
+        <source src="postre1.mp4" type="video/mp4">
+      </video>
+      <h2 id="categories">Postres</h2>
+      <div class="dish-info" id="dish13">
+        <button id="add" data-dish-name="Cheesecake" onclick="toggleOrder(this, 'Cheesecake', '6.50€', 'postre1foto.png')">
+          <i class="fa-solid fa-circle-plus"></i></button>
+        <h3>Cheesecake</h3>
+        <p>6.50€</p>
+        <button id="verMas13" onclick="toggleAllergens('allergens13','verMas13','verMenos13')">Ver más</button>
+        <div class="allergens" id="allergens13" style="display: none;">
+          <p>Alergenos:</p>
+          <p>Lactosa, huevo... etc</p>
+        </div>
+        <button id="verMenos13" onclick="toggleAllergens('allergens13','verMas13','verMenos13')" style="display:none;">
+          Ver menos ⮟
+        </button>
+      </div>
     </div>
+    
+    <!-- No debe haber un </div> aquí. Sigue con las siguientes slides: -->
+    
+    <div class="swiper-slide" data-category="group5">
+      <video id="slider" autoplay muted loop playsinline>
+        <source src="postre2.mp4" type="video/mp4">
+      </video>
+      <h2 id="categories">Postres</h2>
+      <div class="dish-info" id="dish14">
+        <button id="add" data-dish-name="Tarta de zanahoria" onclick="toggleOrder(this, 'Tarta de zanahoria', '6.50€', 'postre2foto.png')">
+          <i class="fa-solid fa-circle-plus"></i></button>
+        <h3>Tarta de zanahoria</h3>
+        <p>6.50€</p>
+        <button id="verMas14" onclick="toggleAllergens('allergens14','verMas14','verMenos14')">Ver más</button>
+        <div class="allergens" id="allergens14" style="display: none;">
+          <p>Alergenos:</p>
+          <p>Zanahoria, huevo... etc</p>
+        </div>
+        <button id="verMenos14" onclick="toggleAllergens('allergens14','verMas14','verMenos14')" style="display:none;">
+          Ver menos ⮟
+        </button>
+      </div>
+    </div>
+    
+    <div class="swiper-slide" data-category="group5">
+      <video id="slider" autoplay muted loop playsinline>
+        <source src="postre3.mp4" type="video/mp4">
+      </video>
+      <h2 id="categories">Postres</h2>
+      <div class="dish-info" id="dish15">
+        <button id="add" data-dish-name="Tarta de manzana" onclick="toggleOrder(this, 'Tarta de manzana', '6.50€', 'postre3foto.png')">
+          <i class="fa-solid fa-circle-plus"></i></button>
+        <h3>Tarta de manzana</h3>
+        <p>6.50€</p>
+        <button id="verMas15" onclick="toggleAllergens('allergens15','verMas15','verMenos15')">Ver más</button>
+        <div class="allergens" id="allergens15" style="display: none;">
+          <p>Alergenos:</p>
+          <p>Huevo... etc</p>
+        </div>
+        <button id="verMenos15" onclick="toggleAllergens('allergens15','verMas15','verMenos15')" style="display:none;">
+          Ver menos ⮟
+        </button>
+      </div>
+    </div>
+    
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
 
@@ -198,9 +367,11 @@
 
       <ul class="navigation">
         <li onclick="filterSlides('group1')"><img src="thumb1.png"></li>
-        <li onclick="filterSlides('group2')"><img src="thumb5.png"></li>
-        <li onclick="filterSlides('group3')"><img src="thumb6.png"></li>
-        <li onclick="filterSlides('group1')"><img src="thumb3.png"></li>
+        <li onclick="filterSlides('group2')"><img src="thumb2.png"></li>
+        <li onclick="filterSlides('group3')"><img src="thumb3.png"></li>
+        <li onclick="filterSlides('group4')"><img src="thumb4.png"></li>
+        <li onclick="filterSlides('group5')"><img src="thumb5.png"></li>
+
       </ul>
     </div>
 
