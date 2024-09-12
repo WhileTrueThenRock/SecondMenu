@@ -2,11 +2,18 @@ body {
     font-family: Arial, sans-serif;
 }
 
+h2{
+    text-align: center;
+}
+
 .my-orders {
-    padding: 20px;
+    padding: 10px;
 }
 
 button {
+    margin-top:10px;
+    margin-left: 5px;
+    font-size: 24px;
     border: none;
     background: none;
     cursor: pointer;
@@ -33,17 +40,21 @@ button {
 }
 
 .quantity-controls {
+    position: relative;
+    margin: 25px;
     display: flex;
     align-items: center;
-    margin-top: 10px;
 }
+
+
+
 
 .quantity-controls button {
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 5px;
-    margin: 0 5px;
+    margin: 0,5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,10 +70,20 @@ button {
     font-size: 24px;
     position: absolute;
     right: 35px;
-    margin-top: 120px;
+    margin-top: 150px;
 }
 
-h3, p {
-    margin: 0;
+h3 {
+    margin-top: 0;
+    margin-bottom: 20px; /* Ajusta el valor para el espacio entre el título y el párrafo */
 }
+
+p {
+    margin-top: 0; /* Elimina el margen superior del párrafo si está demasiado cerca del título */
+    margin-bottom: 0px; /* Ajusta el margen inferior si lo necesitas */
+}
+
+button, i {
+    touch-action: manipulation; /* Previene el zoom en toques dobles */
+  }
 
