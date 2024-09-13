@@ -71,14 +71,14 @@ body {
     padding: 10px;
     /* Añade espacio alrededor del contenido */
     width: 390px;
-    height: 75px;
+    height: auto;
     position: absolute;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
-    z-index: 100;
+    z-index: 200;
     box-sizing: border-box;
     /* Incluye el borde en el tamaño */
 }
