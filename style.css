@@ -82,7 +82,7 @@ body {
     padding: 10px;
     /* Añade espacio alrededor del contenido */
     width: 420px;
-    height: 200px;
+    height: 100px;
     position: absolute;
     bottom: 80px;
     left: 50%;
@@ -144,13 +144,13 @@ div .navigation li {
 }
 
 div .navigation li img {
-    width: 105px;
+    width: 60px;
     height: auto;
     transition: 0.5s;
 }
 
 div .navigation li img:hover {
-    width: 60px;
+    width: 80px;
 }
 
 
@@ -214,7 +214,7 @@ div .navigation li img:hover {
 
 .dish-info {
     color: white;
-    bottom: 250px;
+    bottom: 200px;
     left: 15px;
     padding: 15px;
     border-radius: 10px;
