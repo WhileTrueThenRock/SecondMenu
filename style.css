@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 html,
@@ -45,9 +44,6 @@ body {
     justify-content: center;
 }
 
-
-
-
 .swiper-slide video {
     position: absolute;
     top: 0;
@@ -63,8 +59,6 @@ body {
 
 .navigation {
     display: flex;
-    overflow: auto;
-    white-space: nowrap;
     flex-direction: row;
     padding: 0;
     margin: 0;

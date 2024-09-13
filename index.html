@@ -49,6 +49,49 @@
           </button>
         </div>
       </div>
+
+      <div class="swiper-slide" data-category="group1">
+        <video id="slider" autoplay muted loop playsinline>
+          <source src="entrante2.mp4" type="video/mp4">
+        </video>
+        <h2 id="categories">Entrantes</h2>
+
+        <div class="dish-info" id="dish8">
+          <button id="add" data-dish-name="Variedad de embutidos" onclick="toggleOrder(this, 'Variedad de embutidos', '7.50€ - 2 personas<br>14€ - 4 personas', 'entrante2foto.png')"><i
+              class="fa-solid fa-circle-plus"></i></button>
+
+          <h3>Variedad de embutidos</h3>
+          <p>Variedad de embutidos', '7.50€ - 2 personas<br>14€ - 4 personas</p>
+          <button id="verMas8" onclick="toggleAllergens('allergens8','verMas8','verMenos8')">Ver más</button>
+          <div class="allergens" id="allergens8" style="display: none;">
+            <p>Alergenos:</p>
+            <p>Cacahuete,lactosa,jamón...etc</p>
+          </div>
+          <button id="verMenos8" onclick="toggleAllergens('allergens8','verMas8','verMenos8')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
+      </div>
+
+      <div class="swiper-slide" data-category="group1">
+        <video id="slider" autoplay muted loop playsinline>
+          <source src="entrante3.mp4" type="video/mp4">
+        </video>
+        <h2 id="categories">Entrantes</h2>
+        <div class="dish-info" id="dish9">
+          <button id="add" data-dish-name="Croquetas cremosas" onclick="toggleOrder(this, 'Croquetas cremosas', '6€ - 6 unidades', 'entrante3foto.png')"><i
+              class="fa-solid fa-circle-plus"></i></button>
+
+          <h3>Croquetas cremosas</h3>
+          <p>6€ - 6 unidades</p>
+          <button id="verMas9" onclick="toggleAllergens('allergens9','verMas9','verMenos9')">Ver más</button>
+          <div class="allergens" id="allergens9" style="display: none;">
+            <p>Alergenos:</p>
+            <p>Lactosa, jamón...</p>
+          </div>
+          <button id="verMenos9" onclick="toggleAllergens('allergens9','verMas9','verMenos9')"
+            style="display:none;">Ver menos ⮟</button>
+        </div>
+      </div>
       <!-- Slide 2 -->
       <div class="swiper-slide" data-category="group2">
         <h2 id="categories">Pastas</h2>
@@ -178,48 +221,7 @@
         </div>
       </div>
 
-      <div class="swiper-slide" data-category="group1">
-        <video id="slider" autoplay muted loop playsinline>
-          <source src="entrante2.mp4" type="video/mp4">
-        </video>
-        <h2 id="categories">Entrantes</h2>
-
-        <div class="dish-info" id="dish8">
-          <button id="add" data-dish-name="Variedad de embutidos" onclick="toggleOrder(this, 'Variedad de embutidos', '7.50€ - 2 personas<br>14€ - 4 personas', 'entrante2foto.png')"><i
-              class="fa-solid fa-circle-plus"></i></button>
-
-          <h3>Variedad de embutidos</h3>
-          <p>Variedad de embutidos', '7.50€ - 2 personas<br>14€ - 4 personas</p>
-          <button id="verMas8" onclick="toggleAllergens('allergens8','verMas8','verMenos8')">Ver más</button>
-          <div class="allergens" id="allergens8" style="display: none;">
-            <p>Alergenos:</p>
-            <p>Cacahuete,lactosa,jamón...etc</p>
-          </div>
-          <button id="verMenos8" onclick="toggleAllergens('allergens8','verMas8','verMenos8')"
-            style="display:none;">Ver menos ⮟</button>
-        </div>
-      </div>
-
-      <div class="swiper-slide" data-category="group1">
-        <video id="slider" autoplay muted loop playsinline>
-          <source src="entrante3.mp4" type="video/mp4">
-        </video>
-        <h2 id="categories">Entrantes</h2>
-        <div class="dish-info" id="dish9">
-          <button id="add" data-dish-name="Croquetas cremosas" onclick="toggleOrder(this, 'Croquetas cremosas', '6€ - 6 unidades', 'entrante3foto.png')"><i
-              class="fa-solid fa-circle-plus"></i></button>
-
-          <h3>Croquetas cremosas</h3>
-          <p>6€ - 6 unidades</p>
-          <button id="verMas9" onclick="toggleAllergens('allergens9','verMas9','verMenos9')">Ver más</button>
-          <div class="allergens" id="allergens9" style="display: none;">
-            <p>Alergenos:</p>
-            <p>Lactosa, jamón...</p>
-          </div>
-          <button id="verMenos9" onclick="toggleAllergens('allergens9','verMas9','verMenos9')"
-            style="display:none;">Ver menos ⮟</button>
-        </div>
-      </div>
+    
     <!-- carnes -->
       <div class="swiper-slide" data-category="group4">
         <video id="slider" autoplay muted loop playsinline>
@@ -305,8 +307,6 @@
         </button>
       </div>
     </div>
-    
-    <!-- No debe haber un </div> aquí. Sigue con las siguientes slides: -->
     
     <div class="swiper-slide" data-category="group5">
       <video id="slider" autoplay muted loop playsinline>
