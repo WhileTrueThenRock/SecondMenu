@@ -66,14 +66,25 @@ body {
     transition: transform 0.3s ease;
 }
 
+.navigation li {
+    margin-right: 10px; /* Si quieres espacio entre los thumbs */
+}
+
+.navigation li img {
+    width: 120px; /* Ajusta según el tamaño deseado */
+    height: 100px; /* Fija la altura según lo que prefieras */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro de los límites */
+    transition: 0.3s; /* Para un efecto suave al cambiar el tamaño */
+}
+
 .container {
     background-color: rgb(221, 154, 99);
     padding: 10px;
     /* Añade espacio alrededor del contenido */
-    width: 390px;
-    height: 180px;
+    width: 420px;
+    height: 200px;
     position: absolute;
-    bottom: 0px;
+    bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -85,11 +96,12 @@ body {
 
 
 
+
 .horizontal-scroll {
-    width: 250px;
-    height: 80px;
+    width: 300px; /* Ancho del scroll horizontal ajustado */
+    height: 120px; /* Ajusta la altura del área de desplazamiento */
     border-radius: 5px;
-    overflow: hidden;
+    overflow-x: auto; /* Habilita el scroll horizontal */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -132,7 +144,8 @@ div .navigation li {
 }
 
 div .navigation li img {
-    width: 40px;
+    width: 105px;
+    height: auto;
     transition: 0.5s;
 }
 
