@@ -15,7 +15,7 @@
 
 <body>
   <button id="order"><a href="order.html"><i class="fa-duotone fa-solid fa-list-ol"></i></a></button>
-
+  <h2 id="category-title"></h2> <!-- Título dinámico aquí -->
 
   <!-- Slider main container -->
   <div class="swiper">
@@ -25,7 +25,8 @@
       <div class="swiper-slide" data-category="group1">
         <div class="content" data-content="five">
 
-          <h2 id="categories">Entrantes</h2>
+      
+
           <video id="slider" autoplay muted loop playsinline>
             <source src="entrante1.mp4" type="video/mp4">
           </video>
@@ -55,7 +56,6 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="entrante2.mp4" type="video/mp4">
         </video>
-        <h2 id="categories">Entrantes</h2>
 
         <div class="dish-info" id="dish8">
           <button id="add" data-dish-name="Variedad de embutidos"
@@ -78,7 +78,6 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="entrante3.mp4" type="video/mp4">
         </video>
-        <h2 id="categories">Entrantes</h2>
         <div class="dish-info" id="dish9">
           <button id="add" data-dish-name="Croquetas cremosas"
             onclick="toggleOrder(this, 'Croquetas cremosas', '6€ - 6 unidades', 'entrante3foto.png')"><i
@@ -97,7 +96,6 @@
       </div>
       <!-- Slide 2 -->
       <div class="swiper-slide" data-category="group2">
-        <h2 id="categories">Pastas</h2>
         <video id="slider" autoplay muted loop playsinline>
           <source src="macarrones1.mp4" type="video/mp4">
         </video>
@@ -123,7 +121,6 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="macarrones2.mp4" type="video/mp4">
         </video>
-        <h2 id="categories">Pastas</h2>
         <div class="dish-info" id="dish3">
           <button id="add" data-dish-name="Rigatoni con tomate"
             onclick="toggleOrder(this, 'Rigatoni con tomate', '8.50€\nPasta con salsa del chef', 'macarrones2foto.png')"><i
@@ -145,7 +142,6 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="macarrones3.mp4" type="video/mp4">
         </video>
-        <h2 id="categories">Pastas</h2>
         <div class="dish-info" id="dish4">
           <button id="add" data-dish-name="Macarrones con bacon"
             onclick="toggleOrder(this, 'Macarrones con bacon', '8.50€', 'macarrones3foto.png')"><i
@@ -168,7 +164,6 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="fish1.mp4" type="video/mp4">
         </video>
-        <h2 id="categories">Pescados</h2>
         <div class="dish-info" id="dish5">
           <button id="add" data-dish-name="Dorada a la plancha"
             onclick="toggleOrder(this, 'Dorada a la plancha', '10.50€', 'fish1foto.png')"><i
@@ -190,7 +185,6 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="fish2.mp4" type="video/mp4">
         </video>
-        <h2 id="categories">Pescados</h2>
         <div class="dish-info" id="dish6">
           <button id="add" data-dish-name="Trucha con picadillo"
             onclick="toggleOrder(this, 'Trucha con picadillo', '15.50€', 'fish2foto.png')"><i
@@ -212,7 +206,6 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="fish3.mp4" type="video/mp4">
         </video>
-        <h2 id="categories">Pescados</h2>
         <div class="dish-info" id="dish7">
           <button id="add" data-dish-name="Pescado a la parrilla"
             onclick="toggleOrder(this, 'Pescado a la parrilla', '13.50€', 'fish3foto.png')"><i
@@ -236,7 +229,6 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="carne1.mp4" type="video/mp4">
         </video>
-        <h2 id="categories">Carnes</h2>
         <div class="dish-info" id="dish10">
           <button id="add" data-dish-name="Solomillo de cerdo"
             onclick="toggleOrder(this, 'Solomillo de cerdo', '12.50€', 'carne1foto.png')"><i
@@ -258,7 +250,6 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="carne2.mp4" type="video/mp4">
         </video>
-        <h2 id="categories">Carnes</h2>
         <div class="dish-info" id="dish11">
           <button id="add" data-dish-name="Pollo a la brasa"
             onclick="toggleOrder(this, 'Pollo a la brasa', '11.50€<br> Acompañado de brócoli y arroz', 'carne2foto.png')"><i
@@ -280,7 +271,6 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="carne3.mp4" type="video/mp4">
         </video>
-        <h2 id="categories">Carnes</h2>
         <div class="dish-info" id="dish12">
           <button id="add" data-dish-name="Entrecot con salsa"
             onclick="toggleOrder(this, 'Entrecot con salsa', '14.50€<br> Acompañado de ensalada', 'carne3foto.png')"><i
@@ -303,7 +293,6 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="postre1.mp4" type="video/mp4">
         </video>
-        <h2 id="categories">Postres</h2>
         <div class="dish-info" id="dish13">
           <button id="add" data-dish-name="Cheesecake"
             onclick="toggleOrder(this, 'Cheesecake', '6.50€', 'postre1foto.png')">
@@ -326,7 +315,6 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="postre2.mp4" type="video/mp4">
         </video>
-        <h2 id="categories">Postres</h2>
         <div class="dish-info" id="dish14">
           <button id="add" data-dish-name="Tarta de zanahoria"
             onclick="toggleOrder(this, 'Tarta de zanahoria', '6.50€', 'postre2foto.png')">
@@ -349,7 +337,6 @@
         <video id="slider" autoplay muted loop playsinline>
           <source src="postre3.mp4" type="video/mp4">
         </video>
-        <h2 id="categories">Postres</h2>
         <div class="dish-info" id="dish15">
           <button id="add" data-dish-name="Tarta de manzana"
             onclick="toggleOrder(this, 'Tarta de manzana', '6.50€', 'postre3foto.png')">
@@ -403,7 +390,7 @@
           el: '.swiper-pagination',
           clickable: true,
         },
-        
+
       });
 
       function filterSlides(category) {
@@ -417,9 +404,31 @@
           slide.classList.remove('hidden');
         });
 
+        // Cambiar el título según el grupo
+        const categoryTitle = document.getElementById('category-title');
+        switch (category) {
+          case 'group1':
+            categoryTitle.textContent = 'Entrantes';
+            break;
+          case 'group2':
+            categoryTitle.textContent = 'Pasta';
+            break;
+          case 'group3':
+            categoryTitle.textContent = 'Pescado';
+            break;
+            case 'group4':
+            categoryTitle.textContent = 'Carnes';
+            break;
+            case 'group5':
+            categoryTitle.textContent = 'Postres';
+            break;
+          // Añade más casos para otros grupos
+          default:
+            categoryTitle.textContent = 'Categoría';
+        }
+
         localStorage.setItem('lastCategory', category);
         swiper.update();
-        swiper.pagination.update(); // Actualiza la paginación
 
       }
 
@@ -430,22 +439,25 @@
 
       window.onload = () => {
         const swiperContainer = document.querySelector('.swiper');
-        swiperContainer.classList.add('hidden-swiper'); // Ocultamos el Swiper al cargar
+
+        // Ocultar el Swiper completamente al cargar (opacidad 0)
+        swiperContainer.style.opacity = '0';
 
         const lastCategory = localStorage.getItem('lastCategory') || 'group1';
         const lastSlideIndex = localStorage.getItem('lastSlideIndex') || 0;
 
+        // Aplicar el filtro de categoría al cargar
         filterSlides(lastCategory);
 
-        // Navegar instantáneamente a la última diapositiva sin animación
+        // Mover inmediatamente a la última diapositiva sin animación
         swiper.slideTo(lastSlideIndex, 0, false);
 
-        // Mostrar el Swiper después de moverse a la diapositiva correcta
-        swiper.on('slideChangeTransitionEnd', () => {
-          swiperContainer.classList.remove('hidden-swiper'); // Lo hacemos visible
-          swiperContainer.classList.add('visible-swiper');
-        });
+        // Mostrar el Swiper solo cuando haya cargado la diapositiva correcta
+        setTimeout(() => {
+          swiperContainer.style.opacity = '1'; // Hacerlo visible lentamente después de un breve retraso
+        }, 100); // Este retraso asegura que el Swiper se cargue correctamente
       };
+
 
       swiper.on('slideChange', () => {
         const currentSlide = swiper.realIndex;
