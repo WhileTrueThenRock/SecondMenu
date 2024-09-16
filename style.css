@@ -17,7 +17,7 @@ body {
     position: relative;
 }
 
-
+  
 .swiper-pagination {
     position: absolute;
     left: 10px !important;
@@ -31,6 +31,7 @@ body {
     height: 32px;
     background-image: linear-gradient(180deg, #f09819 0%, #ff512f 100%);
     border-radius: 14px;
+
 }
 
 .swiper-slide {
@@ -67,14 +68,19 @@ body {
 }
 
 .navigation li {
-    margin-right: 10px; /* Si quieres espacio entre los thumbs */
+    margin-right: 10px;
+    /* Si quieres espacio entre los thumbs */
 }
 
 .navigation li img {
-    width: 120px; /* Ajusta según el tamaño deseado */
-    height: 100px; /* Fija la altura según lo que prefieras */
-    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro de los límites */
-    transition: 0.3s; /* Para un efecto suave al cambiar el tamaño */
+    width: 120px;
+    /* Ajusta según el tamaño deseado */
+    height: 100px;
+    /* Fija la altura según lo que prefieras */
+    object-fit: cover;
+    /* Asegura que la imagen se ajuste bien dentro de los límites */
+    transition: 0.3s;
+    /* Para un efecto suave al cambiar el tamaño */
 }
 
 .container {
@@ -98,10 +104,13 @@ body {
 
 
 .horizontal-scroll {
-    width: 300px; /* Ancho del scroll horizontal ajustado */
-    height: 120px; /* Ajusta la altura del área de desplazamiento */
+    width: 300px;
+    /* Ancho del scroll horizontal ajustado */
+    height: 120px;
+    /* Ajusta la altura del área de desplazamiento */
     border-radius: 5px;
-    overflow-x: auto; /* Habilita el scroll horizontal */
+    overflow-x: auto;
+    /* Habilita el scroll horizontal */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -214,7 +223,7 @@ div .navigation li img:hover {
 
 .dish-info {
     color: white;
-    bottom: 200px;
+    bottom: 150px;
     left: 15px;
     padding: 15px;
     border-radius: 10px;
@@ -241,7 +250,7 @@ div .navigation li img:hover {
 #verMas12,
 #verMas13,
 #verMas14,
-#verMas15  {
+#verMas15 {
     background-color: transparent;
     color: #53a7ec;
     border: none;
@@ -306,6 +315,9 @@ video::-moz-media-controls {
     display: none !important;
 }
 
-button, i, li {
-    touch-action: manipulation; /* Previene el zoom en toques dobles */
-  }
+button,
+i,
+li {
+    touch-action: manipulation;
+    /* Previene el zoom en toques dobles */
+}
