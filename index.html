@@ -13,11 +13,18 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.0/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
 <body>
-  <button id="order"><a href="order.html"><i class="fa-solid fa-basket-shopping"></i></a></button>
+  <button id="order">
+    <a href="order.html">
+      <i class="fa-solid fa-basket-shopping"></i>
+    </a>
+    <span id="cart-count" class="cart-badge">0</span> <!-- Contador del carrito -->
+
+  </button>
   <h2 id="category-title"></h2> <!-- Título dinámico aquí -->
   <!-- Slider main container -->
   <div class="swiper">
@@ -31,7 +38,8 @@
           </video>
         </div>
         <div class="dish-info" id="dish1">
-          <img src="entrante1foto.png" alt="Alitas en salsa" style="visibility: visible; position: absolute; height: auto; width: 0px;">
+          <img src="entrante1foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
 
           <button data-dish-name="Alitas en salsa" id="add" class="add-to-order"
             onclick="toggleOrder(this, 'Alitas en salsa', '8.50€<br>10.50 con salsa', 'entrante1foto.png')">
@@ -60,6 +68,8 @@
         </video>
 
         <div class="dish-info" id="dish8">
+          <img src="entrante2foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Variedad de embutidos"
             onclick="toggleOrder(this, 'Variedad de embutidos', '7.50€ - 2 personas<br>14€ - 4 personas', 'entrante2foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
@@ -81,6 +91,8 @@
           <source src="entrante3.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish9">
+          <img src="entrante3foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Croquetas cremosas"
             onclick="toggleOrder(this, 'Croquetas cremosas', '6€ - 6 unidades', 'entrante3foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
@@ -96,12 +108,14 @@
             menos ⮟</button>
         </div>
       </div>
-      <!-- Slide 2 -->
+      <!-- Pastas -->
       <div class="swiper-slide" data-category="group2">
         <video id="slider" autoplay muted loop playsinline>
           <source src="macarrones1.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish2">
+          <img src="macarrones1foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Macarrones con carne picada y judías"
             onclick="toggleOrder(this, 'Macarrones con carne picada y judías', '500 g de carne picada y judías 9.50€', 'macarrones1foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
@@ -117,13 +131,14 @@
             style="display:none;">Ver menos ⮟</button>
         </div>
       </div>
-      <!-- Slide 3 -->
 
       <div class="swiper-slide" data-category="group2">
         <video id="slider" autoplay muted loop playsinline>
           <source src="macarrones2.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish3">
+          <img src="macarrones2foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Rigatoni con tomate"
             onclick="toggleOrder(this, 'Rigatoni con tomate', '8.50€\nPasta con salsa del chef', 'macarrones2foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
@@ -145,6 +160,8 @@
           <source src="macarrones3.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish4">
+          <img src="macarrones3foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Macarrones con bacon"
             onclick="toggleOrder(this, 'Macarrones con bacon', '8.50€', 'macarrones3foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
@@ -167,6 +184,8 @@
           <source src="fish1.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish5">
+          <img src="fish1foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Dorada a la plancha"
             onclick="toggleOrder(this, 'Dorada a la plancha', '10.50€', 'fish1foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
@@ -188,6 +207,8 @@
           <source src="fish2.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish6">
+          <img src="fish2foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Trucha con picadillo"
             onclick="toggleOrder(this, 'Trucha con picadillo', '15.50€', 'fish2foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
@@ -209,6 +230,8 @@
           <source src="fish3.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish7">
+          <img src="fish3foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Pescado a la parrilla"
             onclick="toggleOrder(this, 'Pescado a la parrilla', '13.50€', 'fish3foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
@@ -232,6 +255,8 @@
           <source src="carne1.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish10">
+          <img src="carne1foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Solomillo de cerdo"
             onclick="toggleOrder(this, 'Solomillo de cerdo', '12.50€', 'carne1foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
@@ -253,6 +278,8 @@
           <source src="carne2.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish11">
+          <img src="carne2foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Pollo a la brasa"
             onclick="toggleOrder(this, 'Pollo a la brasa', '11.50€<br> Acompañado de brócoli y arroz', 'carne2foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
@@ -274,6 +301,8 @@
           <source src="carne3.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish12">
+          <img src="carne3foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Entrecot con salsa"
             onclick="toggleOrder(this, 'Entrecot con salsa', '14.50€<br> Acompañado de ensalada', 'carne3foto.png')"><i
               class="fa-solid fa-circle-plus"></i></button>
@@ -296,6 +325,8 @@
           <source src="postre1.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish13">
+          <img src="postre1foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Cheesecake"
             onclick="toggleOrder(this, 'Cheesecake', '6.50€', 'postre1foto.png')">
             <i class="fa-solid fa-circle-plus"></i></button>
@@ -318,6 +349,8 @@
           <source src="postre2.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish14">
+          <img src="postre2foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Tarta de zanahoria"
             onclick="toggleOrder(this, 'Tarta de zanahoria', '6.50€', 'postre2foto.png')">
             <i class="fa-solid fa-circle-plus"></i></button>
@@ -340,6 +373,8 @@
           <source src="postre3.mp4" type="video/mp4">
         </video>
         <div class="dish-info" id="dish15">
+          <img src="postre3foto.png" alt="Alitas en salsa"
+            style="visibility: visible; position: absolute; height: auto; width: 0px;">
           <button id="add" data-dish-name="Tarta de manzana"
             onclick="toggleOrder(this, 'Tarta de manzana', '6.50€', 'postre3foto.png')">
             <i class="fa-solid fa-circle-plus"></i></button>
@@ -358,7 +393,7 @@
       </div>
     </div>
     <div class="swiper-pagination"></div>
-
+<!-- Thumbs & Arrows -->
     <div class="container">
 
       <button class="nav-arrow prev" id="btn-scroll-left" onclick="scrollList(-1)"><i
@@ -378,215 +413,9 @@
 
       <button class="nav-arrow next" id="btn-scroll-right" onclick="scrollList(1)"><i
           class="fa-sharp fa-solid fa-arrow-right"></i></button>
-
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper('.swiper', {
-        direction: 'vertical',
-        speed: 200,
-        slidesPerView: 1,
-        spaceBetween: 0,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-
-      });
-
-      function filterSlides(category) {
-        const slides = document.querySelectorAll('.swiper-slide');
-        slides.forEach(slide => {
-          slide.classList.add('hidden');
-        });
-
-        const filteredSlides = document.querySelectorAll(`.swiper-slide[data-category="${category}"]`);
-        filteredSlides.forEach(slide => {
-          slide.classList.remove('hidden');
-        });
-
-        // Cambiar el título según el grupo
-        const categoryTitle = document.getElementById('category-title');
-        switch (category) {
-          case 'group1':
-            categoryTitle.textContent = 'Entrantes';
-            break;
-          case 'group2':
-            categoryTitle.textContent = 'Pasta';
-            break;
-          case 'group3':
-            categoryTitle.textContent = 'Pescado';
-            break;
-          case 'group4':
-            categoryTitle.textContent = 'Carnes';
-            break;
-          case 'group5':
-            categoryTitle.textContent = 'Postres';
-            break;
-          // Añade más casos para otros grupos
-          default:
-            categoryTitle.textContent = 'Categoría';
-        }
-
-        localStorage.setItem('lastCategory', category);
-        swiper.update();
-
-      }
-
-      function saveCurrentSlide(category, slideIndex) {
-        localStorage.setItem('lastCategory', category);
-        localStorage.setItem('lastSlideIndex', slideIndex);
-      }
-
-      window.onload = () => {
-        const swiperContainer = document.querySelector('.swiper');
-
-        // Ocultar el Swiper completamente al cargar (opacidad 0)
-        swiperContainer.style.opacity = '0';
-
-        const lastCategory = localStorage.getItem('lastCategory') || 'group1';
-        const lastSlideIndex = localStorage.getItem('lastSlideIndex') || 0;
-
-        // Aplicar el filtro de categoría al cargar
-        filterSlides(lastCategory);
-
-        // Mover inmediatamente a la última diapositiva sin animación
-        swiper.slideTo(lastSlideIndex, 0, false);
-
-        // Mostrar el Swiper solo cuando haya cargado la diapositiva correcta
-        setTimeout(() => {
-          swiperContainer.style.opacity = '1'; // Hacerlo visible lentamente después de un breve retraso
-        }, 100); // Este retraso asegura que el Swiper se cargue correctamente
-      };
-
-
-      swiper.on('slideChange', () => {
-        const currentSlide = swiper.realIndex;
-        const currentCategory = localStorage.getItem('lastCategory');
-        saveCurrentSlide(currentCategory, currentSlide);
-      });
-    </script>
-
-    <script>
-      function toggleAllergens(allergensId, viewMoreId, viewLessId) {
-        const allergensDiv = document.getElementById(allergensId);
-        const viewMore = document.getElementById(viewMoreId);
-        const viewLess = document.getElementById(viewLessId);
-
-        if (allergensDiv.style.display === 'none') {
-          allergensDiv.style.display = 'block';
-          viewMore.style.display = 'none';
-          viewLess.style.display = 'inline-block';
-        } else {
-          allergensDiv.style.display = 'none';
-          viewMore.style.display = 'inline-block';
-          viewLess.style.display = 'none';
-        }
-      }
-
-    </script>
-
-
-    <script>
-      let scrollAmount = 0;
-      const scrollStep = 120; // Ajusta este valor para que se desplace un elemento a la vez
-
-      function scrollList(direction) {
-        const list = document.querySelector('.navigation');
-        const listWidth = list.scrollWidth;
-        const containerWidth = document.querySelector('.horizontal-scroll').clientWidth;
-
-        if (direction === 1) {
-          // Desplazar hacia la derecha
-          scrollAmount += scrollStep;
-          if (scrollAmount > listWidth - containerWidth) {
-            scrollAmount = listWidth - containerWidth; // No permite sobrepasar el final
-          }
-        } else {
-          // Desplazar hacia la izquierda
-          scrollAmount -= scrollStep;
-          if (scrollAmount < 0) {
-            scrollAmount = 0; // No permite sobrepasar el inicio
-          }
-        }
-
-        list.style.transform = `translateX(-${scrollAmount}px)`;
-      }
-
-    </script>
-
-<script>
-  // Función que revisa el carrito en localStorage y actualiza los íconos de los botones cuando la página se carga.
-  document.addEventListener('DOMContentLoaded', () => {
-    // Obtener el carrito de localStorage (o crear uno si no existe)
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Recorremos todos los botones "add" en la página
-    document.querySelectorAll('button#add').forEach(button => {
-      const dishName = button.getAttribute('data-dish-name'); // Usamos un atributo data para identificar el plato
-
-      // Verificamos si el plato ya está en el carrito
-      let dishInCart = cart.find(item => item.name === dishName);
-      if (dishInCart) {
-        // Si está en el carrito, mostramos el icono de check
-        button.innerHTML = '<i class="fa-solid fa-check"></i>';
-      } else {
-        // Si no está en el carrito, mostramos el icono de agregar
-        button.innerHTML = '<i class="fa-solid fa-circle-plus"></i>';
-      }
-    });
-  });
-
-  // Función para agregar o eliminar platos del carrito
-  function toggleOrder(button, dishName, description, imageUrl) {
-    const item = { name: dishName, description: description, imageUrl: imageUrl };
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let dishIndex = cart.findIndex(item => item.name === dishName);
-
-    if (dishIndex !== -1) {
-      // Si ya está en el carrito, lo quitamos
-      cart.splice(dishIndex, 1);
-      button.innerHTML = '<i class="fa-solid fa-circle-plus"></i>';
-    } else {
-      // Si no está en el carrito, lo agregamos
-      cart.push({ name: dishName, description: description, imageUrl: imageUrl, quantity: 1 });
-      button.innerHTML = '<i class="fa-solid fa-check"></i>';
-      
-      // Realizar la animación solo al agregar
-      let cartElement = $('#order'); // Selecciona el botón de la orden como destino
-      let imgtodrag = $(button).closest('.dish-info').find("img").eq(0); // Selecciona la primera imagen dentro del contenedor
-
-      if (imgtodrag.length) {
-        var imgclone = imgtodrag.clone().offset({
-          top: imgtodrag.offset().top,
-          left: imgtodrag.offset().left
-        }).css({
-          'opacity': '0.8',
-          'position': 'absolute',
-          'height': '150px',
-          'width': '150px',
-          'z-index': '100'
-        }).appendTo($('body')).animate({
-          'top': cartElement.offset().top + 10, // Ajusta la posición de destino
-          'left': cartElement.offset().left + 10, // Ajusta la posición de destino
-          'width': 75,
-          'height': 75
-        }, 1000, 'easeInOutExpo', function() {
-          imgclone.fadeOut('fast', function() {
-            $(this).remove();
-          });
-        });
-      }
-    }
-
-    // Guardar de nuevo el carrito actualizado en localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }
-</script>
-
-
-
+    
+    <script src="script.js"></script>
 
 </body>
 
