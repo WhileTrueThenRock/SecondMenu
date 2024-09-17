@@ -11,12 +11,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.0/jquery-ui.min.js"></script>
+
 </head>
 
 <body>
   <button id="order"><a href="order.html"><i class="fa-duotone fa-solid fa-list-ol"></i></a></button>
   <h2 id="category-title"></h2> <!-- Título dinámico aquí -->
-
   <!-- Slider main container -->
   <div class="swiper">
     <!-- Additional required wrapper -->
@@ -24,18 +26,19 @@
       <!-- Plato 1 entrantes-->
       <div class="swiper-slide" data-category="group1">
         <div class="content" data-content="five">
-
-      
-
           <video id="slider" autoplay muted loop playsinline>
             <source src="entrante1.mp4" type="video/mp4">
           </video>
         </div>
         <div class="dish-info" id="dish1">
-          <button id="add" data-dish-name="Alitas en salsa"
+          <!-- Imagen del plato, oculta pero aún en el DOM -->
+          <img src="entrante1foto.png" alt="Alitas en salsa" style="visibility: hidden; position: absolute;">
+
+          <button class="add-to-order" data-dish-name="Alitas en salsa"
             onclick="toggleOrder(this, 'Alitas en salsa', '8.50€<br>10.50 con salsa', 'entrante1foto.png')">
             <i class="fa-solid fa-circle-plus"></i>
           </button>
+
           <h3>Alitas en salsa</h3>
           <p>8.50€<br>10€ con salsa</p>
           <button id="verMas1" onclick="toggleAllergens('allergens1','verMas1','verMenos1')">Ver más
@@ -416,10 +419,10 @@
           case 'group3':
             categoryTitle.textContent = 'Pescado';
             break;
-            case 'group4':
+          case 'group4':
             categoryTitle.textContent = 'Carnes';
             break;
-            case 'group5':
+          case 'group5':
             categoryTitle.textContent = 'Postres';
             break;
           // Añade más casos para otros grupos
@@ -466,24 +469,24 @@
       });
     </script>
 
-<script>
-  function toggleAllergens(allergensId, viewMoreId, viewLessId) {
-    const allergensDiv = document.getElementById(allergensId);
-    const viewMore = document.getElementById(viewMoreId);
-    const viewLess = document.getElementById(viewLessId);
+    <script>
+      function toggleAllergens(allergensId, viewMoreId, viewLessId) {
+        const allergensDiv = document.getElementById(allergensId);
+        const viewMore = document.getElementById(viewMoreId);
+        const viewLess = document.getElementById(viewLessId);
 
-    if (allergensDiv.style.display === 'none') {
-      allergensDiv.style.display = 'block';
-      viewMore.style.display = 'none';
-      viewLess.style.display = 'inline-block';
-    } else {
-      allergensDiv.style.display = 'none';
-      viewMore.style.display = 'inline-block';
-      viewLess.style.display = 'none';
-    }
-  }
+        if (allergensDiv.style.display === 'none') {
+          allergensDiv.style.display = 'block';
+          viewMore.style.display = 'none';
+          viewLess.style.display = 'inline-block';
+        } else {
+          allergensDiv.style.display = 'none';
+          viewMore.style.display = 'inline-block';
+          viewLess.style.display = 'none';
+        }
+      }
 
-</script>
+    </script>
 
 
     <script>
@@ -563,6 +566,8 @@
 
       }
     </script>
+
+    <script src="script.js"></script>
 
 
 </body>

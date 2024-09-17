@@ -237,8 +237,13 @@ div .navigation li img:hover {
     position: absolute;
     text-align: left;
     /* Asegura que el texto esté alineado a la izquierda */
-
 }
+
+.dish-info img {
+    visibility: hidden; /* Oculta la imagen sin quitarla del DOM */
+    position: absolute; /* Evita que ocupe espacio en el layout */
+}
+
 
 #verMas1,
 #verMas2,
@@ -325,3 +330,4 @@ li {
     touch-action: manipulation;
     /* Previene el zoom en toques dobles */
 }
+
