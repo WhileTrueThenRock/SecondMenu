@@ -466,6 +466,25 @@
       });
     </script>
 
+<script>
+  function toggleAllergens(allergensId, viewMoreId, viewLessId) {
+    const allergensDiv = document.getElementById(allergensId);
+    const viewMore = document.getElementById(viewMoreId);
+    const viewLess = document.getElementById(viewLessId);
+
+    if (allergensDiv.style.display === 'none') {
+      allergensDiv.style.display = 'block';
+      viewMore.style.display = 'none';
+      viewLess.style.display = 'inline-block';
+    } else {
+      allergensDiv.style.display = 'none';
+      viewMore.style.display = 'inline-block';
+      viewLess.style.display = 'none';
+    }
+  }
+
+</script>
+
 
     <script>
       let scrollAmount = 0;
