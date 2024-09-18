@@ -88,7 +88,8 @@ body {
 }
 
 .container {
-    background-color: rgb(221, 154, 99);
+    background-color: rgb(100, 107, 0);
+    opacity: 0.9;
     padding: 10px;
     /* Añade espacio alrededor del contenido */
     width: 420px;
@@ -212,7 +213,7 @@ div .navigation li img:hover {
     /* Fondo transparente */
     font-size: 34px;
     /* Ajusta el tamaño del icono */
-    color: rgb(0, 168, 56);
+    color: whitesmoke;
     border: none;
     /* Sin borde */
     padding: 0;
@@ -232,7 +233,7 @@ div .navigation li img:hover {
     font-weight: 700;
     position: absolute;
     top: 50px;
-    left: 100px;
+    left: 90px;
     text-align: center;
     letter-spacing: 8px;
 }
@@ -256,20 +257,18 @@ div .navigation li img:hover {
         margin-bottom: -40px;
     }
 }
-
 .dish-info {
+    background-color: rgba(56, 71, 0, 0.3); /* Fondo verde oscuro con opacidad solo en el fondo */
     color: white;
     bottom: 150px;
-    left: 15px;
     padding: 15px;
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
     z-index: 10;
-    /* Asegura que la información esté por encima del video */
     position: absolute;
     text-align: left;
-    /* Asegura que el texto esté alineado a la izquierda */
 }
+
 
 .dish-info img {
     visibility: hidden; /* Oculta la imagen sin quitarla del DOM */

@@ -147,7 +147,7 @@ const swiper = new Swiper('.swiper', {
 
       let dishInCart = cart.find(item => item.name === dishName);
       if (dishInCart) {
-        button.innerHTML = '<i class="fa-solid fa-check"></i>';
+        button.innerHTML = '<i class="fa-solid fa-check"style="color: green;"></i>';
       } else {
         button.innerHTML = '<i class="fa-solid fa-circle-plus"></i>';
       }
@@ -164,7 +164,7 @@ const swiper = new Swiper('.swiper', {
       button.innerHTML = '<i class="fa-solid fa-circle-plus"></i>';
     } else {
       cart.push({ name: dishName, description: description, imageUrl: imageUrl, quantity: 1 });
-      button.innerHTML = '<i class="fa-solid fa-check"></i>';
+      button.innerHTML = '<i class="fa-solid fa-check"style="color: green;"></i>';
 
       let cartElement = $('#order');
       let imgtodrag = $(button).closest('.dish-info').find("img").eq(0);

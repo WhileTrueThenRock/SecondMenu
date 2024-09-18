@@ -1,8 +1,9 @@
 body {
+    background-image: linear-gradient(180deg, #718355 0%, #e9f5db 100%);
     font-family: Arial, sans-serif;
 }
 
-h2{
+h2 {
     text-align: center;
 }
 
@@ -20,18 +21,50 @@ button {
 }
 
 .order-item {
-    display: flex; /* Usa flexbox para alinear los elementos */
-    align-items: flex-start; /* Alinea los elementos verticalmente */
-    margin-bottom: 20px; /* Espacio entre elementos */
-    border: 1px solid #ddd; /* Borde para el contenedor del pedido */
-    padding: 10px; /* Relleno para el contenedor del pedido */
-    border-radius: 5px; /* Redondea los bordes del contenedor del pedido */
+    position: relative; /* Necesario para posicionar el borde animado */
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 15px; /* Redondea el borde del contenedor */
+    overflow: hidden; /* Asegura que el borde animado no se desborde */
+    background-color: transparent; /* Fondo transparente para no interferir */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Agrega sombra al contenedor */
+
+}
+
+/* Estilo del borde animado */
+.order-item::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* Ajusta según el grosor del borde */
+    left: -5px; /* Ajusta según el grosor del borde */
+    width: calc(100% + 10px); /* Ajusta el tamaño del borde */
+    height: calc(100% + 10px); /* Ajusta el tamaño del borde */
+    border: 2px solid transparent; /* Color del borde cuando no está animado */
+    border-radius: 15px; /* Debe coincidir con el borde del contenedor */
+    background: linear-gradient(60deg, transparent, #57664a80, transparent); /* Gradiente del borde */
+    background-size: 400% 400%; /* Tamaño del gradiente para animación */
+    animation: animate-border 4s linear infinite; /* Aplicamos la animación */
+    z-index: -1; /* Asegura que esté detrás del contenido */
+}
+
+@keyframes animate-border {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 .order-item img {
-    width: 100px; /* Tamaño de la imagen */
+    width: 100px;
     height: auto;
-    margin-right: 15px; /* Espacio entre la imagen y el texto */
+    margin-right: 15px;
 }
 
 .order-details {
@@ -46,27 +79,26 @@ button {
     align-items: center;
 }
 
-
-
-
 .quantity-controls button {
+    font-size: 18px;
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 5px;
-    margin: 0,5px;
+    margin: 0.5px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .quantity-controls span {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     margin: 0 10px;
 }
 
 #removeitem {
-    color: red;
+    color: rgb(187, 10, 10);
     font-size: 24px;
     position: absolute;
     right: 35px;
@@ -75,15 +107,14 @@ button {
 
 h3 {
     margin-top: 0;
-    margin-bottom: 20px; /* Ajusta el valor para el espacio entre el título y el párrafo */
+    margin-bottom: 20px;
 }
 
 p {
-    margin-top: 0; /* Elimina el margen superior del párrafo si está demasiado cerca del título */
-    margin-bottom: 0px; /* Ajusta el margen inferior si lo necesitas */
+    margin-top: 0;
+    margin-bottom: 0px;
 }
 
 button, i {
-    touch-action: manipulation; /* Previene el zoom en toques dobles */
-  }
-
+    touch-action: manipulation;
+}
