@@ -109,6 +109,8 @@ body {
 
 
 .horizontal-scroll {
+    margin-left: 45px;
+
     width: 300px;
     /* Ancho del scroll horizontal ajustado */
     height: 120px;
@@ -188,7 +190,7 @@ div .navigation li img:hover {
     /* Mostrar cursor de mano para indicar clic */
     position: absolute;
     top: 25px;
-    left: 350px;
+    left: 320px;
     z-index: 10;
 }
 
