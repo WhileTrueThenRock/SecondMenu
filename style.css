@@ -189,7 +189,7 @@ div .navigation li img:hover {
     /* Mostrar cursor de mano para indicar clic */
     position: absolute;
     top: 25px;
-    left: 40.5vh;
+    left: 85.5%;
     z-index: 10;
 }
 
@@ -225,7 +225,7 @@ div .navigation li img:hover {
     /* Mostrar cursor de mano para indicar clic */
     position: absolute;
     bottom: 45px;
-    left: 40.5vh;
+    left: 85.5%;
     z-index: 10;
 }
 
