@@ -88,7 +88,7 @@ body {
 }
 
 .container {
-    background-color: rgb(100, 107, 0);
+    background-color: #1b4332;
     opacity: 0.9;
     padding: 10px;
     /* Añade espacio alrededor del contenido */
@@ -109,8 +109,6 @@ body {
 
 
 .horizontal-scroll {
-    margin-left: 45px;
-
     width: 300px;
     /* Ancho del scroll horizontal ajustado */
     height: 120px;
@@ -140,11 +138,12 @@ body {
 }
 
 .prev {
-    margin-right: 10px;
+    margin-left: 5vh;
+
 }
 
 .next {
-    margin-left: 10px;
+    margin-right: 5vh;
 }
 
 
@@ -190,7 +189,7 @@ div .navigation li img:hover {
     /* Mostrar cursor de mano para indicar clic */
     position: absolute;
     top: 25px;
-    left: 320px;
+    left: 40.5vh;
     z-index: 10;
 }
 
@@ -226,16 +225,17 @@ div .navigation li img:hover {
     /* Mostrar cursor de mano para indicar clic */
     position: absolute;
     bottom: 45px;
-    left: 320px;
+    left: 40.5vh;
     z-index: 10;
 }
+
 #category-title {
     color: white;
     z-index: 10;
     font-weight: 700;
     position: absolute;
     top: 50px;
-    left: 90px;
+    left: 5vh;
     text-align: center;
     letter-spacing: 8px;
 }
@@ -260,7 +260,7 @@ div .navigation li img:hover {
     }
 }
 .dish-info {
-    background-color: rgba(56, 71, 0, 0.3); /* Fondo verde oscuro con opacidad solo en el fondo */
+    background-color: rgba(13, 36, 13, 0.3); /* Fondo verde oscuro con opacidad solo en el fondo */
     color: white;
     bottom: 150px;
     padding: 15px;

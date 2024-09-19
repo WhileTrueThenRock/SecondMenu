@@ -108,7 +108,7 @@ const swiper = new Swiper('.swiper', {
     }
   }
 
- /* //Arrows scroll
+  //Arrows scroll
   let scrollAmount = 0;
   const scrollStep = 120; // Ajusta este valor para que se desplace un elemento a la vez
 
@@ -132,7 +132,7 @@ const swiper = new Swiper('.swiper', {
     }
 
     list.style.transform = `translateX(-${scrollAmount}px)`;
-  } */
+  } 
 
   //Cart number + effects
 
