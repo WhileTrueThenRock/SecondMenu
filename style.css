@@ -87,7 +87,6 @@ body {
     /* Para un efecto suave al cambiar el tamaño */
 }
 
-@media only screen and (max-width: 768px) {
 .container {
     background-color: #1b4332;
     opacity: 0.9;
@@ -96,7 +95,7 @@ body {
     width: 420px;
     height: 75px;
     position: absolute;
-    bottom: 80px;
+    bottom: calc(80px + env(safe-area-inset-bottom)); /* Para asegurar que la parte inferior sea respetada en iPhones */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -104,7 +103,6 @@ body {
     z-index: 100;
     box-sizing: border-box;
     /* Incluye el borde en el tamaño */
-}
 }
 
 
