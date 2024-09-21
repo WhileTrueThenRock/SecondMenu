@@ -106,10 +106,24 @@ body {
 }
 
 
-/* Específicamente para Safari */
+/* Manejar el espacio seguro de iOS (iPhone X en adelante) */
+@supports (env(safe-area-inset-bottom)) {
+    .container {
+        bottom: calc(80px + env(safe-area-inset-bottom)); /* Ajuste para los dispositivos con notch (iPhones) */
+    }
+}
+
+/* Específicamente para Safari en iOS, por ejemplo en el iPhone */
 @supports (-webkit-touch-callout: none) {
     .container {
-        bottom: 80px; /* Ajuste especial para Safari */
+        bottom: 80px; /* Safari y iPhones antiguos sin safe areas */
+    }
+}
+
+/* Ajustes para pantallas grandes como tablets */
+@media only screen and (min-width: 768px) {
+    .container {
+        bottom: 12vh; /* Ajuste para tablets o pantallas más grandes */
     }
 }
 
