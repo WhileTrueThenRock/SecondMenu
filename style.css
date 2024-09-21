@@ -93,9 +93,9 @@ body {
     padding: 10px;
     /* Añade espacio alrededor del contenido */
     width: 420px;
-    height: 85px;
+    height: 95px;
     position: absolute;
-    bottom: 10%;
+    bottom: 11%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -262,6 +262,7 @@ div .navigation li img:hover {
     background-color: rgba(13, 36, 13, 0.3); /* Fondo verde oscuro con opacidad solo en el fondo */
     color: white;
     bottom: 150px;
+    margin-bottom: 25px;
     padding: 15px;
     border-radius: 10px;
     width: 100%;
