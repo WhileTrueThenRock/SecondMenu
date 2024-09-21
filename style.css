@@ -95,7 +95,7 @@ body {
     width: 420px;
     height: 75px;
     position: absolute;
-    bottom: 80px;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -234,7 +234,7 @@ div .navigation li img:hover {
     z-index: 10;
     font-weight: 700;
     position: absolute;
-    top: 50px;
+    top: 60px;
     left: 5vh;
     text-align: center;
     letter-spacing: 8px;
