@@ -95,7 +95,7 @@ body {
     width: 420px;
     height: 75px;
     position: absolute;
-    bottom: 11vh; /* Usa el valor que sea menor entre 80px y 10vh */
+    bottom: 11%; /* Usa el valor que sea menor entre 80px y 10vh */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -106,24 +106,9 @@ body {
 }
 
 
-/* Manejar el espacio seguro de iOS (iPhone X en adelante) */
-@supports (env(safe-area-inset-bottom)) {
+@media screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
     .container {
-        bottom: calc(80px + env(safe-area-inset-bottom)); /* Ajuste para los dispositivos con notch (iPhones) */
-    }
-}
-
-/* Específicamente para Safari en iOS, por ejemplo en el iPhone */
-@supports (-webkit-touch-callout: none) {
-    .container {
-        bottom: 80px; /* Safari y iPhones antiguos sin safe areas */
-    }
-}
-
-/* Ajustes para pantallas grandes como tablets */
-@media only screen and (min-width: 768px) {
-    .container {
-        bottom: 12vh; /* Ajuste para tablets o pantallas más grandes */
+        bottom: 80px; /* Ajuste específico para Safari en iPhones */
     }
 }
 
