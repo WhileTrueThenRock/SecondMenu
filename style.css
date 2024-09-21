@@ -95,7 +95,7 @@ body {
     width: 420px;
     height: 75px;
     position: absolute;
-    bottom: min(80px, 9vh); /* Usa el valor que sea menor entre 80px y 10vh */
+    bottom: min(80px, 2vh); /* Usa el valor que sea menor entre 80px y 10vh */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
