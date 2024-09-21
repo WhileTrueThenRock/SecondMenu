@@ -86,7 +86,7 @@ body {
     transition: 0.3s;
     /* Para un efecto suave al cambiar el tamaño */
 }
-
+@media only screen and (max-width: 768px) {
 .container {
     background-color: #1b4332;
     opacity: 0.9;
@@ -95,7 +95,7 @@ body {
     width: 420px;
     height: 75px;
     position: absolute;
-    bottom: calc(80px + env(safe-area-inset-bottom)); /* Para asegurar que la parte inferior sea respetada en iPhones */
+    bottom: calc(80px + 3vh); /* Para ajustar mejor en móviles */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -104,7 +104,26 @@ body {
     box-sizing: border-box;
     /* Incluye el borde en el tamaño */
 }
-
+}
+@media only screen and (max-width: 769px) {
+    .container {
+        background-color: #1b4332;
+        opacity: 0.9;
+        padding: 10px;
+        /* Añade espacio alrededor del contenido */
+        width: 420px;
+        height: 75px;
+        position: absolute;
+        bottom: 11%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        z-index: 100;
+        box-sizing: border-box;
+        /* Incluye el borde en el tamaño */
+    }
+    }
 
 
 .horizontal-scroll {
