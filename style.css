@@ -95,7 +95,7 @@ body {
     width: 420px;
     height: 75px;
     position: absolute;
-    bottom: 10vh;
+    bottom: 11%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
